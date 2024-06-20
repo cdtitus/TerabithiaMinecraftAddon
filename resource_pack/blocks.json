@@ -1,6 +1,6 @@
 { 
     "format_version": "1.21.0", 
-    "tma:test_block2": { 
+    "tma:test_block": { 
         "textures": { 
             "up": "red", 
             "down": "red", 

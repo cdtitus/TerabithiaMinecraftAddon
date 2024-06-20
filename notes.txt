@@ -1,0 +1,4 @@
+
+To debug:
+
+From within minecraft: /script debugger connect
