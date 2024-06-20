@@ -1,0 +1,40 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Terabithia Resource Pack",
+        "description": "Terabithia Realm Resource Pack",
+        "uuid": "b5aad437-0850-4650-b3d7-08b8507b2834",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "Terabithia Realm Resource Pack",
+            "type": "resources",
+            "uuid": "5d2a3edb-0111-4d3f-a510-0b2fc8df2cee",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "749d40bd-da36-4d3b-9e5a-0bf309563f83",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}
