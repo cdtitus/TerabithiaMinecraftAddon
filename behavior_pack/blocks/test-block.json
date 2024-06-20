@@ -1,0 +1,10 @@
+{ 
+    "format_version": "1.21.0", 
+    "minecraft:block": { 
+        "description": { 
+            "identifier": "tma:test_block" 
+        }, 
+        "components": { 
+        } 
+    } 
+}

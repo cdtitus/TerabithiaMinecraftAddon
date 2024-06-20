@@ -1,0 +1,15 @@
+{ 
+    "format_version": "1.21.0", 
+    "tma:test_block2": { 
+        "textures": { 
+            "up": "red", 
+            "down": "red", 
+            "north": "red", 
+            "south": "red", 
+            "east": "red", 
+            "west": "red" 
+        }, 
+        "carried_textures": "red", 
+        "sound": "stone" 
+    } 
+}
