@@ -1,0 +1,15 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "tma:deepslate_uranium_ore_feature"
+		},
+		"count": 8,
+		"replace_rules": [
+			{
+				"places_block": "tma:deepslate_uranium_ore",
+				"may_replace": ["minecraft:deepslate"]
+			}
+		]
+	}
+}

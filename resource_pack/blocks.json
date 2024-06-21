@@ -11,5 +11,17 @@
         }, 
         "carried_textures": "red", 
         "sound": "stone" 
+    },
+    "tma:deepslate_uranium_ore": { 
+        "textures": { 
+            "up": "deepslate_uranium_ore", 
+            "down": "deepslate_uranium_ore", 
+            "north": "deepslate_uranium_ore", 
+            "south": "deepslate_uranium_ore", 
+            "east": "deepslate_uranium_ore", 
+            "west": "deepslate_uranium_ore" 
+        }, 
+        "carried_textures": "deepslate_uranium_ore", 
+        "sound": "stone"
     } 
 }

@@ -1,1 +1,4 @@
 tile.tma:test_block.name=Test Block
+tile.tma:deepslate_uranium_ore.name=Deepslate Uranium Ore Block
+tile.tma:raw_uranium.name=Raw Uranium
+tile.tma:uranium_ingot.name=Uranium Ingot
