@@ -2,7 +2,7 @@ import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 import { TestBlockComponent } from './TestBlockComponent';
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
-    initEvent.blockTypeRegistry.registerCustomComponent('content:test_component', new TestBlockComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent('content:test_component', new TestBlockComponent());
 });
 
 function mainTick() {
@@ -13,4 +13,4 @@ function mainTick() {
     system.run(mainTick);
 }
 
-system.run(mainTick);
+//system.run(mainTick);
