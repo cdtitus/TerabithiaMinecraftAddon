@@ -2,7 +2,7 @@
     "format_version": "1.21.0", 
     "minecraft:block": { 
         "description": { 
-            "identifier": "tma:test_block" 
+            "identifier": "tma:pipe" 
         }, 
         "components": {
             "minecraft:custom_components": ["content:test_component"]

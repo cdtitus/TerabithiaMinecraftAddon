@@ -1,17 +1,5 @@
 { 
     "format_version": "1.21.0", 
-    "tma:test_block": { 
-        "textures": { 
-            "up": "red", 
-            "down": "red", 
-            "north": "red", 
-            "south": "red", 
-            "east": "red", 
-            "west": "red" 
-        }, 
-        "carried_textures": "red", 
-        "sound": "stone" 
-    },
     "tma:deepslate_uranium_ore": { 
         "textures": { 
             "up": "deepslate_uranium_ore", 
@@ -23,5 +11,17 @@
         }, 
         "carried_textures": "deepslate_uranium_ore", 
         "sound": "stone"
-    } 
+    },
+    "tma:pipe": { 
+        "textures": { 
+            "up": "red", 
+            "down": "red", 
+            "north": "red", 
+            "south": "red", 
+            "east": "red", 
+            "west": "red" 
+        }, 
+        "carried_textures": "red", 
+        "sound": "stone" 
+    }
 }
