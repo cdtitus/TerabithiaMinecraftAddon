@@ -5,7 +5,13 @@
             "identifier": "tma:pipe" 
         }, 
         "components": {
-            "minecraft:custom_components": ["content:test_component"]
+            "minecraft:custom_components": ["content:test_component"],
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "blend"
+                }
+            }
         } 
     } 
 }

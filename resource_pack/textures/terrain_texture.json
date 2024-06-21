@@ -7,8 +7,8 @@
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
-        "red": { 
-            "textures": "textures/blocks/red" 
+        "pipe": { 
+            "textures": "textures/blocks/pipe" 
         }
     } 
 }

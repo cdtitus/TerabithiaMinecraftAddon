@@ -14,14 +14,14 @@
     },
     "tma:pipe": { 
         "textures": { 
-            "up": "red", 
-            "down": "red", 
-            "north": "red", 
-            "south": "red", 
-            "east": "red", 
-            "west": "red" 
+            "up": "pipe", 
+            "down": "pipe", 
+            "north": "pipe", 
+            "south": "pipe", 
+            "east": "pipe", 
+            "west": "pipe" 
         }, 
-        "carried_textures": "red", 
+        "carried_textures": "pipe", 
         "sound": "stone" 
     }
 }
