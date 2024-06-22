@@ -2,6 +2,33 @@
     "resource_pack_name": "terabithia-addon",
     "texture_name": "atlas.items",
     "texture_data": {
+        "emerald_axe": {
+            "textures": "textures/items/emerald_axe"
+        },
+        "emerald_boots": {
+            "textures": "textures/items/emerald_boots"
+        },
+        "emerald_chestplate": {
+            "textures": "textures/items/emerald_chestplate"
+        },
+        "emerald_helmet": {
+            "textures": "textures/items/emerald_helmet"
+        },
+        "emerald_hoe": {
+            "textures": "textures/items/emerald_hoe"
+        },
+        "emerald_leggings": {
+            "textures": "textures/items/emerald_leggings"
+        },
+        "emerald_pickaxe": {
+            "textures": "textures/items/emerald_pickaxe"
+        },
+        "emerald_shovel": {
+            "textures": "textures/items/emerald_shovel"
+        },
+        "emerald_sword": {
+            "textures": "textures/items/emerald_sword"
+        },
         "heartstealer": {
             "textures": "textures/items/heartstealer"
         },
