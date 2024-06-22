@@ -4,11 +4,17 @@
     "padding": 8, 
     "num_mip_levels": 4, 
     "texture_data": {
+        "chair": {
+			"textures": "textures/blocks/chair"
+		},
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
         "pipe": { 
             "textures": "textures/blocks/pipe" 
+        },
+        "table_small": { 
+            "textures": "textures/blocks/table_small" 
         }
     } 
 }

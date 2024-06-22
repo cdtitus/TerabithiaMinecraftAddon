@@ -1,4 +1,7 @@
-tile.tma:pipe.name=Pipe
+
+tile.tma:chair.name=Chair
 tile.tma:deepslate_uranium_ore.name=Deepslate Uranium Ore
+tile.tma:pipe.name=Pipe
 tile.tma:raw_uranium.name=Raw Uranium
+tile.tma:table_small.name=Small Table
 tile.tma:uranium_ingot.name=Uranium Ingot
