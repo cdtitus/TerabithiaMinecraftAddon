@@ -1,5 +1,6 @@
 import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 import { TestBlockComponent } from './TestBlockComponent';
+import "./DeathBoard"
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
     initEvent.blockComponentRegistry.registerCustomComponent('content:test_component', new TestBlockComponent());
