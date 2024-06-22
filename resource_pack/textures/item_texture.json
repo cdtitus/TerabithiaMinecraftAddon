@@ -2,6 +2,12 @@
     "resource_pack_name": "terabithia-addon",
     "texture_name": "atlas.items",
     "texture_data": {
+        "heartstealer": {
+            "textures": "textures/items/heartstealer"
+        },
+        "osiris": {
+			"textures": "textures/items/osiris.png"
+		},
         "raw_uranium": {
             "textures": "textures/items/raw_uranium"
         },
