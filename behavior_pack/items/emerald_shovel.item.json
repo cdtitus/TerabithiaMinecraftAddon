@@ -9,7 +9,9 @@
 				}
 			},
 			"components": {
-				"minecraft:damage": 10,
+				"minecraft:damage": {
+					"value": 4
+				},
 				"minecraft:digger": {
 					"use_efficiency": true,
 					"destroy_speeds": [
