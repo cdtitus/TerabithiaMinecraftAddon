@@ -7,6 +7,9 @@
         "chair": {
 			"textures": "textures/blocks/chair"
 		},
+        "counter_with_drawers": {
+			"textures": "textures/blocks/counter_with_drawers"
+		},
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
