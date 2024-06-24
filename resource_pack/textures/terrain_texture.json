@@ -10,6 +10,9 @@
         "counter_with_drawers": {
 			"textures": "textures/blocks/counter_with_drawers"
 		},
+        "counter_with_sink": {
+			"textures": "textures/blocks/counter_with_sink"
+		},
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
