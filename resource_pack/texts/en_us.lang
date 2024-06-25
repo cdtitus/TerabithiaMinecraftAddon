@@ -1,4 +1,6 @@
 
+tile.tma:birch_chair.name=Birch Chair
+tile.tma:birch_table.name=Birch Table
 tile.tma:chair.name=Chair
 tile.tma:counter_with_drawers.name=Counter With Drawers
 tile.tma:counter_with_sink.name=Counter With Sink
