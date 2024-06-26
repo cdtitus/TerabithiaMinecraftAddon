@@ -22,15 +22,15 @@
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
-        "oak_chair": {
-			"textures": "textures/blocks/oak_chair"
-		},
-        "oak_table": {
-			"textures": "textures/blocks/oak_table"
-		},
         "pipe": { 
             "textures": "textures/blocks/pipe" 
         },
+        "spruce_chair": {
+			"textures": "textures/blocks/spruce_chair"
+		},
+        "spruce_table": {
+			"textures": "textures/blocks/spruce_table"
+		},
         "table_small": { 
             "textures": "textures/blocks/table_small" 
         }

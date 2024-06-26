@@ -2,7 +2,7 @@
 	"format_version": "1.21.0",
 	"minecraft:block": {
 		"description": {
-			"identifier": "tma:oak_table",
+			"identifier": "tma:spruce_table",
 			"menu_category": {
 				"category": "construction"
 			},
@@ -23,10 +23,10 @@
 				"destroy_chance_modifier": 20,
 				"catch_chance_modifier": 5
 			},
-			"minecraft:geometry": "geometry.oak_table",
+			"minecraft:geometry": "geometry.spruce_table",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "oak_table",
+					"texture": "spruce_table",
 					"render_method": "alpha_test"
 				}
 			},
