@@ -1,13 +1,25 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.21.10",
 	"animations": {
 		"animation.heartstealer.hold": {
 			"loop": true,
 			"bones": {
 				"rightitem": {
-					"position": [ "c.is_first_person ? -1 : 1", "c.is_first_person ? 0 : -1", "c.is_first_person ? -1 : -6" ],
-					"rotation": [ "c.is_first_person ? 45 : 15", "c.is_first_person ? -15 : 0", "c.is_first_person ? 30 : -165" ],
-					"scale":["c.is_first_person ? 1 : 0.5", "c.is_first_person ? 1 : 0.5", "c.is_first_person ? 1 : 0.5"]
+					"position": [
+						"c.is_first_person ? -4 : 0",
+						"c.is_first_person ? 10 : -1.5",
+						"c.is_first_person ? -1 : 0"
+					],
+					"rotation": [
+						"c.is_first_person ? -20 : -45",
+						"c.is_first_person ? -45 : 0",
+						"c.is_first_person ? 90 : -175"
+					],
+					"scale":[
+						"c.is_first_person ? 0.75 : 0.5",
+						"c.is_first_person ? 0.75 : 0.5",
+						"c.is_first_person ? 0.75 : 0.5"
+					]
 				}
 			}
 		}
