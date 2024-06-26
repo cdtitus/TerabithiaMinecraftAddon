@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tma:ulysses"
+		},
+		"components": {
+			"minecraft:armor": {
+				"protection": 10
+			},
+			"minecraft:display_name": {
+				"value": "Ulysses"
+			},
+			"minecraft:icon": "ulysses",
+			"minecraft:max_stack_size": 1,
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.weapon.offhand"
+			},
+			"minecraft:durability": {
+				"max_durability": 200
+			}
+		}
+	}
+}

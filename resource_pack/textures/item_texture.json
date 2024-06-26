@@ -41,6 +41,9 @@
         "raw_uranium": {
             "textures": "textures/items/raw_uranium"
         },
+        "ulysses": {
+            "textures": "textures/items/ulysses"
+        },
         "uranium_ingot": {
             "textures": "textures/items/uranium_ingot"
         }

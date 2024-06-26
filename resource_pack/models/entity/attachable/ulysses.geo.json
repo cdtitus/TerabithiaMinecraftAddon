@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ulysses",
+				"texture_width": 20,
+				"texture_height": 22,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "leftitem",
+					"pivot": [0, 0, 0],
+					"texture_meshes": [
+						{
+							"texture": "default",
+							"position": [0, 0, 0],
+							"rotation": [0, 0, 0],
+							"scale": [1, 2, 2],
+							"local_pivot": [0, 0, 0]
+						}
+					]
+				}
+			]
+		}
+	]
+}
