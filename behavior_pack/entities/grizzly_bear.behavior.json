@@ -3,7 +3,7 @@
 	"minecraft:entity": {
 		"description": {
 			"identifier": "tma:grizzly_bear",
-			"runtime_identifier": "minecraft:polar_bear",
+			"runtime_identifier": "minecraft:grizzly_bear",
 			"is_spawnable": true,
 			"is_summonable": true,
 			"is_experimental": false
@@ -62,6 +62,10 @@
 				},
 				"minecraft:loot": {
 					"table": "loot_tables/entities/polar_bear.json"
+				},
+				"minecraft:behavior.breed": {
+					"priority": 2,
+					"speed_multiplier": 1
 				}
 			},
 			"minecraft:adult_wild": {
@@ -86,6 +90,53 @@
 						}
 					],
 					"must_see": false
+				},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"family_types": ["player"],
+					"interact_text": "action.interact.mount",
+					"seats": {
+						"position": [0, 1.1, -0.2]
+					}
+				},
+				"minecraft:behavior.mount_pathing": {
+					"priority": 2,
+					"speed_multiplier": 1.5,
+					"target_dist": 0,
+					"track_target": true
+				},
+				"minecraft:tamemount": {
+					"min_temper": 0,
+					"max_temper": 100,
+					"feed_text": "action.interact.feed",
+					"ride_text": "action.interact.mount",
+					"feed_items": [
+						{
+							"item": "salmon",
+							"temper_mod": 3
+						}
+					],
+					"auto_reject_items": [
+						{
+							"item": "horsearmorleather"
+						},
+						{
+							"item": "horsearmoriron"
+						},
+						{
+							"item": "horsearmorgold"
+						},
+						{
+							"item": "horsearmordiamond"
+						},
+						{
+							"item": "saddle"
+						}
+					],
+					"tame_event": {
+						"event": "minecraft:on_tame",
+						"target": "self"
+					}
 				}
 			},
 			"minecraft:adult_hostile": {
@@ -109,10 +160,68 @@
 					"no_damage_range_multiplier": 2
 				}
 			}
+			,
+		"minecraft:adult_tamed": {
+				"minecraft:is_tamed": {},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"crouching_skip_interact": true,
+					"family_types": ["player"],
+					"interact_text": "action.interact.ride.horse",
+					"seats": {
+						"position": [0, 1.1, -0.2]
+					}
+				},
+				"minecraft:inventory": {
+					"inventory_size": 1,
+					"container_type": "horse"
+				},
+				"minecraft:breedable": {
+					"require_tame": true,
+					"inherit_tamed": false,
+					"breeds_with": [
+						{
+							"mate_type": "tma:grizzly_bear",
+							"baby_type": "tma:grizzly_bear",
+							"breed_event": {
+								"event": "minecraft:entity_born",
+								"target": "baby"
+							}
+						}
+					],
+					"breed_items": ["salmon"]
+				},
+				"minecraft:behavior.tempt": {
+					"priority": 5,
+					"speed_multiplier": 1.2,
+					"items": ["salmon"]
+				}
+			},
+			"minecraft:adult_saddled": {
+				"minecraft:is_saddled": {},
+				"minecraft:input_ground_controlled": {},
+				"minecraft:can_power_jump": {},
+				"minecraft:behavior.player_ride_tamed": {}
+			}
 		},
 		"components": {
 			"minecraft:type_family": {
-				"family": ["polarbear", "mob"]
+				"family": ["grizzlybear", "mob"]
+			},
+			"minecraft:equippable": {
+				"slots": [
+					{
+						"slot": 0,
+						"item": "saddle",
+						"accepted_items": ["saddle"],
+						"on_equip": {
+							"event": "minecraft:adult_saddled"
+						},
+						"on_unequip": {
+							"event": "minecraft:adult_unsaddled"
+						}
+					}
+				]
 			},
 			"minecraft:breathable": {
 				"total_supply": 15,
@@ -252,6 +361,24 @@
 				},
 				"add": {
 					"component_groups": ["minecraft:baby_scared"]
+				}
+			},
+			"minecraft:on_tame": {
+				"remove": {
+					"component_groups": ["minecraft:adult_wild"]
+				},
+				"add": {
+					"component_groups": ["minecraft:adult_tamed"]
+				}
+			},
+			"minecraft:adult_saddled": {
+				"add": {
+					"component_groups": ["minecraft:adult_saddled"]
+				}
+			},
+			"minecraft:adult_unsaddled": {
+				"remove": {
+					"component_groups": ["minecraft:adult_saddled"]
 				}
 			}
 		}
