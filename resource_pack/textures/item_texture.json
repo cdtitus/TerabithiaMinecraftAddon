@@ -32,6 +32,9 @@
         "heartstealer": {
             "textures": "textures/items/heartstealer"
         },
+        "hightower": {
+            "textures": "textures/items/hightower"
+        },
         "osiris": {
 			"textures": "textures/items/osiris.png"
 		},
