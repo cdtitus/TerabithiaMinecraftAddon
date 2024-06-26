@@ -1,12 +1,11 @@
-
-tile.tma:birch_chair.name=Birch Chair
-tile.tma:birch_table.name=Birch Table
 tile.tma:chair.name=Chair
 tile.tma:counter_with_drawers.name=Counter With Drawers
 tile.tma:counter_with_sink.name=Counter With Sink
 tile.tma:deepslate_uranium_ore.name=Deepslate Uranium Ore
 tile.tma:heartstealer.name=Heartstealer
 tile.tma:hightower.name=Hightower
+tile.tma:oak_chair.name=Oak Chair
+tile.tma:oak_table.name=Oak Table
 tile.tma:osiris.name=Osiris
 tile.tma:pipe.name=Pipe
 tile.tma:raw_uranium.name=Raw Uranium

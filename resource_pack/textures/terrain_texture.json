@@ -4,12 +4,6 @@
     "padding": 8, 
     "num_mip_levels": 4, 
     "texture_data": {
-        "birch_chair": {
-			"textures": "textures/blocks/birch_chair"
-		},
-        "birch_table": {
-			"textures": "textures/blocks/birch_table"
-		},
         "chair": {
 			"textures": "textures/blocks/chair"
 		},
@@ -22,6 +16,12 @@
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
         },
+        "oak_chair": {
+			"textures": "textures/blocks/oak_chair"
+		},
+        "oak_table": {
+			"textures": "textures/blocks/oak_table"
+		},
         "pipe": { 
             "textures": "textures/blocks/pipe" 
         },
