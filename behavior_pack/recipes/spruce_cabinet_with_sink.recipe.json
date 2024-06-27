@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.81",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "tma:spruce_cabinet_with_sink"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"PNP",
+			"NIN",
+			"PNP"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:spruce_planks"
+			},
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+            "N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "tma:spruce_cabinet_with_sink"
+		}
+	}
+}

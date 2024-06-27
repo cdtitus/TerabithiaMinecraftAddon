@@ -2,7 +2,7 @@
 	"format_version": "1.21.0",
 	"minecraft:block": {
 		"description": {
-			"identifier": "tma:counter_with_sink",
+			"identifier": "tma:spruce_cabinet_with_countertop",
 			"menu_category": {
 				"category": "construction"
 			},
@@ -23,10 +23,10 @@
 				"destroy_chance_modifier": 20,
 				"catch_chance_modifier": 5
 			},
-			"minecraft:geometry": "geometry.counter_with_sink",
+			"minecraft:geometry": "geometry.spruce_cabinet_with_countertop",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "counter_with_sink",
+					"texture": "spruce_cabinet_with_countertop",
 					"render_method": "alpha_test"
 				}
 			},

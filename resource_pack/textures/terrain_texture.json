@@ -7,14 +7,11 @@
         "chair": {
 			"textures": "textures/blocks/chair"
 		},
-        "counter_with_drawers": {
-			"textures": "textures/blocks/counter_with_drawers"
-		},
-        "counter_with_sink": {
-			"textures": "textures/blocks/counter_with_sink"
-		},
         "deepslate_uranium_ore": { 
             "textures": "textures/blocks/deepslate_uranium_ore" 
+        },
+        "icebox": { 
+            "textures": "textures/blocks/icebox" 
         },
         "oak_chair": {
 			"textures": "textures/blocks/oak_chair"
@@ -25,6 +22,12 @@
         "pipe": { 
             "textures": "textures/blocks/pipe" 
         },
+        "spruce_cabinet_with_countertop": {
+			"textures": "textures/blocks/spruce_cabinet_with_countertop"
+		},
+        "spruce_cabinet_with_sink": {
+			"textures": "textures/blocks/spruce_cabinet_with_sink"
+		},
         "spruce_chair": {
 			"textures": "textures/blocks/spruce_chair"
 		},
