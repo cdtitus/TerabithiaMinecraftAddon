@@ -13,6 +13,12 @@
         "icebox": { 
             "textures": "textures/blocks/icebox" 
         },
+        "oak_cabinet_with_countertop": {
+			"textures": "textures/blocks/oak_cabinet_with_countertop"
+		},
+        "oak_cabinet_with_sink": {
+			"textures": "textures/blocks/oak_cabinet_with_sink"
+		},
         "oak_chair": {
 			"textures": "textures/blocks/oak_chair"
 		},

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.81",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "tma:oak_cabinet_with_countertop"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"PNP",
+			"NPN",
+			"PNP"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:oak_planks"
+			},
+            "N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "tma:oak_cabinet_with_countertop"
+		}
+	}
+}
