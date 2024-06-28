@@ -1,27 +1,41 @@
-{ 
-    "format_version": "1.21.0", 
-    "tma:deepslate_uranium_ore": { 
-        "textures": { 
-            "up": "deepslate_uranium_ore", 
-            "down": "deepslate_uranium_ore", 
-            "north": "deepslate_uranium_ore", 
-            "south": "deepslate_uranium_ore", 
-            "east": "deepslate_uranium_ore", 
-            "west": "deepslate_uranium_ore" 
-        }, 
-        "carried_textures": "deepslate_uranium_ore", 
+{
+    "format_version": "1.21.0",
+    "tma:chair": {
+        "sound": "wood"
+    },
+    "tma:deepslate_uranium_ore": {
+        "textures": "deepslate_uranium_ore",
         "sound": "stone"
     },
-    "tma:pipe": { 
-        "textures": { 
-            "up": "pipe", 
-            "down": "pipe", 
-            "north": "pipe", 
-            "south": "pipe", 
-            "east": "pipe", 
-            "west": "pipe" 
-        }, 
-        "carried_textures": "pipe", 
-        "sound": "stone" 
+    "tma:oak_cabinet_with_countertop": {
+        "sound": "wood"
+    },
+    "tma:oak_cabinet_with_sink": {
+        "sound": "wood"
+    },
+    "tma:oak_chair": {
+        "sound": "wood"
+    },
+    "tma:oak_table": {
+        "sound": "wood"
+    },
+    "tma:pipe": {
+        "textures": "pipe",
+        "sound": "glass"
+    },
+    "tma:spruce_cabinet_with_countertop": {
+        "sound": "wood"
+    },
+    "tma:spruce_cabinet_with_sink": {
+        "sound": "wood"
+    },
+    "tma:spruce_chair": {
+        "sound": "wood"
+    },
+    "tma:spruce_table": {
+        "sound": "wood"
+    },
+    "tma:table_small": {
+        "sound": "wood"
     }
 }
