@@ -1,47 +1,47 @@
-{ 
-    "resource_pack_name": "terabithia-addon", 
-    "texture_name": "atlas.terrain", 
-    "padding": 8, 
-    "num_mip_levels": 4, 
+{
+    "resource_pack_name": "terabithia-addon",
+    "texture_name": "atlas.terrain",
+    "padding": 8,
+    "num_mip_levels": 4,
     "texture_data": {
         "chair": {
-			"textures": "textures/blocks/chair"
-		},
-        "deepslate_uranium_ore": { 
-            "textures": "textures/blocks/deepslate_uranium_ore" 
+            "textures": "textures/blocks/chair"
         },
-        "icebox": { 
-            "textures": "textures/blocks/icebox" 
+        "deepslate_uranium_ore": {
+            "textures": "textures/blocks/deepslate_uranium_ore"
         },
         "oak_cabinet_with_countertop": {
-			"textures": "textures/blocks/oak_cabinet_with_countertop"
-		},
+            "textures": "textures/blocks/oak_cabinet_with_countertop"
+        },
         "oak_cabinet_with_sink": {
-			"textures": "textures/blocks/oak_cabinet_with_sink"
-		},
+            "textures": "textures/blocks/oak_cabinet_with_sink"
+        },
         "oak_chair": {
-			"textures": "textures/blocks/oak_chair"
-		},
+            "textures": "textures/blocks/oak_chair"
+        },
         "oak_table": {
-			"textures": "textures/blocks/oak_table"
-		},
-        "pipe": { 
-            "textures": "textures/blocks/pipe" 
+            "textures": "textures/blocks/oak_table"
+        },
+        "pipe": {
+            "textures": "textures/blocks/pipe"
+        },
+        "refridgerator": {
+            "textures": "textures/blocks/refridgerator"
         },
         "spruce_cabinet_with_countertop": {
-			"textures": "textures/blocks/spruce_cabinet_with_countertop"
-		},
+            "textures": "textures/blocks/spruce_cabinet_with_countertop"
+        },
         "spruce_cabinet_with_sink": {
-			"textures": "textures/blocks/spruce_cabinet_with_sink"
-		},
+            "textures": "textures/blocks/spruce_cabinet_with_sink"
+        },
         "spruce_chair": {
-			"textures": "textures/blocks/spruce_chair"
-		},
+            "textures": "textures/blocks/spruce_chair"
+        },
         "spruce_table": {
-			"textures": "textures/blocks/spruce_table"
-		},
-        "table_small": { 
-            "textures": "textures/blocks/table_small" 
+            "textures": "textures/blocks/spruce_table"
+        },
+        "table_small": {
+            "textures": "textures/blocks/table_small"
         }
-    } 
+    }
 }
