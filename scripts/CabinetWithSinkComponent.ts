@@ -20,11 +20,10 @@ export class CabinetWithSinkComponent implements BlockCustomComponent {
         const selectedItem = inventory?.container?.getSlot(selectedSlotIndex);
 
         if (selectedItem?.type.id === BUCKET) {
-            selectedItem.amount -= 1;
-
             const waterBucket = new ItemStack(WATER_BUCKET, 1);
 
             if (selectedItem?.amount > 1) {
+                selectedItem.amount -= 1;
                 inventory?.container?.addItem(waterBucket);
             } else {
                 inventory?.container?.setItem(selectedSlotIndex, waterBucket);
