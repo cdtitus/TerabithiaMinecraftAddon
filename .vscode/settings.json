@@ -1,0 +1,26 @@
+{   
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.ignoreLimitWarning": true,
+    "editor.formatOnSave": true,
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/lib": true
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,    
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/lib": true
+    }
+}

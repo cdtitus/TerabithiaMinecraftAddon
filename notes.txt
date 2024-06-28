@@ -2,3 +2,19 @@
 To debug:
 
 From within minecraft: /script debugger connect
+
+
+
+
+Placement Pass Types for feature rules:
+first_pass
+before_underground_pass
+underground_pass
+after_underground_pass
+before_surface_pass
+surface_pass
+after_surface_pass
+before_sky_pass
+sky_pass
+after_sky_pass
+final_pass
