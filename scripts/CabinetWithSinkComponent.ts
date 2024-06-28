@@ -2,7 +2,8 @@ import {
     BlockComponentPlayerInteractEvent,
     BlockCustomComponent,
     EntityComponentTypes,
-    ItemStack
+    EntityInventoryComponent,
+    ItemStack,
 } from '@minecraft/server';
 
 const BUCKET: string = 'minecraft:bucket';
@@ -15,7 +16,7 @@ export class CabinetWithSinkComponent implements BlockCustomComponent {
 
     onPlayerInteract(event: BlockComponentPlayerInteractEvent): void {
         const player = event.player;
-        const inventory = player?.getComponent(EntityComponentTypes.Inventory);
+        const inventory = <EntityInventoryComponent>player?.getComponent(EntityComponentTypes.Inventory);
         const selectedSlotIndex = <number>player?.selectedSlotIndex;
         const selectedItem = inventory?.container?.getSlot(selectedSlotIndex);
 

@@ -4,16 +4,8 @@
         "name": "Terabithia Behavior Pack",
         "description": "Terabithia Realm Behavior Pack",
         "uuid": "749d40bd-da36-4d3b-9e5a-0bf309563f83",
-        "version": [
-            1,
-            0,
-            0
-        ],
-        "min_engine_version": [
-            1,
-            21,
-            0
-        ]
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
     },
     "modules": [
         {
@@ -21,26 +13,18 @@
             "language": "javascript",
             "type": "script",
             "uuid": "bae89172-e27e-45cc-9596-9d44563fe6c5",
-            "version": [
-                1,
-                0,
-                0
-            ],
+            "version": [1, 0, 0],
             "entry": "scripts/main.js"
         }
     ],
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.13.0-beta"
+            "version": "1.13.0"
         },
         {
             "uuid": "18a0f56d-9762-46fb-9951-dc266698021e",
-            "version": [
-                1,
-                0,
-                0
-            ]
+            "version": [1, 0, 0]
         }
     ]
 }
