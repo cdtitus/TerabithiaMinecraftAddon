@@ -1,8 +1,5 @@
 {
     "format_version": "1.21.0",
-    "tma:chair": {
-        "sound": "wood"
-    },
     "tma:deepslate_uranium_ore": {
         "textures": "deepslate_uranium_ore",
         "sound": "stone"
@@ -35,7 +32,10 @@
     "tma:spruce_table": {
         "sound": "wood"
     },
-    "tma:table_small": {
+    "tma:spruce_white_chair": {
+        "sound": "wood"
+    },
+    "tma:spruce_white_table": {
         "sound": "wood"
     }
 }
