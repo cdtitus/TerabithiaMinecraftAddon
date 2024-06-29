@@ -7,6 +7,9 @@
         "deepslate_uranium_ore": {
             "textures": "textures/blocks/deepslate_uranium_ore"
         },
+        "dryer": {
+            "textures": "textures/blocks/dryer"
+        },
         "oak_cabinet_with_countertop": {
             "textures": "textures/blocks/oak_cabinet_with_countertop"
         },
@@ -42,6 +45,9 @@
         },
         "spruce_white_table": {
             "textures": "textures/blocks/spruce_white_table"
+        },
+        "washer": {
+            "textures": "textures/blocks/washer"
         }
     }
 }
