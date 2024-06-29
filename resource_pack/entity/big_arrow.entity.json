@@ -1,0 +1,29 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "tma:big_arrow",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/arrows"
+            },
+            "geometry": {
+                "default": "geometry.arrow"
+            },
+            "animations": {
+                "move": "animation.big_arrow.move"
+            },
+            "animation_controllers": [
+                {
+                    "move": "controller.animation.big_arrow.move"
+                }
+            ],
+            "scripts": {
+                "scale": "4.0"
+            },
+            "render_controllers": ["controller.render.arrow"]
+        }
+    }
+}

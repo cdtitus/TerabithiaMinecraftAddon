@@ -1,30 +1,53 @@
 {
-	"format_version": "1.20.50",
-	"minecraft:item": {
-		"description": {
-			"identifier": "tma:hightower",
-			"menu_category": {
-				"category": "equipment",
-				"group": "itemGroup.name.sword"
-			}
-		},
-		"components": {
-			"minecraft:max_stack_size": 1,
-			"minecraft:icon": "hightower",
-			"minecraft:glint": true,
-			"minecraft:damage": 20,
-			"minecraft:can_destroy_in_creative": false,
-			"minecraft:durability": {
-				"max_durability": 2100
-			},
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": ["iron_ingot"],
-						"repair_amount": 2100
-					}
-				]
-			}
-		}
-	}
+    "format_version": "1.20.81",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tma:hightower",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.sword"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "Hightower"
+            },
+            "minecraft:icon": "hightower",
+            "minecraft:max_stack_size": 1,
+            "minecraft:glint": true,
+            "minecraft:can_destroy_in_creative": false,
+            "minecraft:damage": 20,
+            "minecraft:cooldown": {
+                "category": "attack",
+                "duration": 0.2
+            },
+            "minecraft:durability": {
+                "max_durability": 2100
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["iron_ingot"],
+                        "repair_amount": 2100
+                    }
+                ]
+            },
+            "minecraft:shooter": {
+                "ammunition": [
+                    {
+                        "item": "tma:big_arrow",
+                        "use_offhand": false,
+                        "search_inventory": true,
+                        "use_in_creative": false
+                    }
+                ],
+                "max_draw_duration": 0,
+                "scale_power_by_draw_duration": false,
+                "charge_on_draw": false
+            },
+            "minecraft:use_modifiers": {
+                "use_duration": 0.2
+            }
+        }
+    }
 }

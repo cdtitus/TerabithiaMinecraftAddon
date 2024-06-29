@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.81",
+    "animations": {
+        "animation.big_arrow.move": {
+            "loop": true,
+            "bones": {
+                "body": {
+                    "rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tma:big_arrow",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.arrow"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": 64,
+            "minecraft:display_name": {
+                "value": "Big Arrow"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "arrow"
+                }
+            },
+            "minecraft:projectile": {
+                "minimum_critical_power": 0.0,
+                "projectile_entity": "tma:big_arrow"
+            }
+        }
+    }
+}
