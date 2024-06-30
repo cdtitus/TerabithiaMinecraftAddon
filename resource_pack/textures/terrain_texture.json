@@ -25,6 +25,9 @@
         "oak_dishwasher_with_countertop": {
             "textures": "textures/blocks/oak_dishwasher_with_countertop"
         },
+        "oak_end_table": {
+            "textures": "textures/blocks/oak_table"
+        },
         "oak_table": {
             "textures": "textures/blocks/oak_table"
         },
@@ -48,6 +51,9 @@
         },
         "spruce_dishwasher_with_countertop": {
             "textures": "textures/blocks/spruce_dishwasher_with_countertop"
+        },
+        "spruce_end_table": {
+            "textures": "textures/blocks/spruce_table"
         },
         "spruce_table": {
             "textures": "textures/blocks/spruce_table"
