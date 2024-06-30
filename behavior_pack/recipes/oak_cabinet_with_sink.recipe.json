@@ -1,31 +1,30 @@
 {
-	"format_version": "1.20.81",
-	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "tma:oak_cabinet_with_sink"
-		},
-		"tags": [ "crafting_table" ],
-		"pattern": [
-			"PNP",
-			"NIN",
-			"PNP"
-		],
-		"key": {
-			"P": {
-				"item": "minecraft:oak_planks"
-			},
-			"I": {
-				"item": "minecraft:iron_ingot"
-			},
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:oak_cabinet_with_sink"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["QIQ", "NPN", "PPP"],
+        "key": {
+            "Q": {
+                "item": "minecraft:quartz_block"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
             "N": {
-				"item": "minecraft:iron_nugget"
-			}
-		},
-		"unlock": {
-			"context": "AlwaysUnlocked"
-		},
-		"result": {
-			"item": "tma:oak_cabinet_with_sink"
-		}
-	}
+                "item": "minecraft:iron_nugget"
+            },
+            "P": {
+                "item": "minecraft:oak_planks"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:oak_cabinet_with_sink"
+        }
+    }
 }
