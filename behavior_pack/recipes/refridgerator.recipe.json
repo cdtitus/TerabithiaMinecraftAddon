@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:refridgerator"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["NII", "NIG", "NII"],
+        "key": {
+            "G": {
+                "item": "minecraft:glass"
+            },
+            "N": {
+                "item": "minecraft:iron_nugget"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:refridgerator"
+        }
+    }
+}
