@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:oak_cabinet"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["NPN", "NPN", ""],
+        "key": {
+            "N": {
+                "item": "minecraft:iron_nugget"
+            },
+            "P": {
+                "item": "minecraft:oak_planks"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:oak_cabinet"
+        }
+    }
+}

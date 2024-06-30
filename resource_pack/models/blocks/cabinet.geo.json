@@ -1,0 +1,91 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.cabinet",
+                "texture_width": 64,
+                "texture_height": 64,
+                "visible_bounds_width": 4,
+                "visible_bounds_height": 2.5,
+                "visible_bounds_offset": [0, 0.75, 0]
+            },
+            "bones": [
+                {
+                    "name": "cabinet_with_sink",
+                    "pivot": [0, 0, 0]
+                },
+                {
+                    "name": "cabinet",
+                    "parent": "cabinet_with_sink",
+                    "pivot": [7, 0, -6],
+                    "cubes": [
+                        {
+                            "origin": [-8, 0, -2],
+                            "size": [16, 16, 10],
+                            "uv": {
+                                "north": { "uv": [32, 10], "uv_size": [32, 19] },
+                                "east": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "south": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "west": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "up": { "uv": [64, 32], "uv_size": [-32, -32] },
+                                "down": { "uv": [64, 32], "uv_size": [-32, -32] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "cabinet_doors",
+                    "parent": "cabinet_with_sink",
+                    "pivot": [6, 0, -10],
+                    "cubes": [
+                        {
+                            "origin": [-7.5, 0.5, -2.5],
+                            "size": [7.4, 15, 0.5],
+                            "uv": {
+                                "north": { "uv": [32, 0], "uv_size": [32, 24] },
+                                "east": { "uv": [32, 0], "uv_size": [32, 1] },
+                                "south": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "west": { "uv": [32, 0], "uv_size": [32, 1] },
+                                "up": { "uv": [64, 1], "uv_size": [-32, -1] },
+                                "down": { "uv": [64, 1], "uv_size": [-32, -1] }
+                            }
+                        },
+                        {
+                            "origin": [0.1, 0.5, -2.5],
+                            "size": [7.4, 15, 0.5],
+                            "uv": {
+                                "north": { "uv": [32, 8], "uv_size": [32, 24] },
+                                "east": { "uv": [32, 0], "uv_size": [32, 1] },
+                                "south": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "west": { "uv": [32, 0], "uv_size": [32, 1] },
+                                "up": { "uv": [64, 1], "uv_size": [-32, -1] },
+                                "down": { "uv": [64, 1], "uv_size": [-32, -1] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "left_door_hinges",
+                    "parent": "cabinet_doors",
+                    "pivot": [-9, 6, -8],
+                    "cubes": [
+                        { "origin": [-7.75, 13.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63] },
+                        { "origin": [-7.75, 7.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63], "mirror": true },
+                        { "origin": [-7.75, 1.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63] }
+                    ]
+                },
+                {
+                    "name": "right_door_hinges",
+                    "parent": "cabinet_doors",
+                    "pivot": [7, 5, -8],
+                    "cubes": [
+                        { "origin": [7.5, 13.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63] },
+                        { "origin": [7.5, 7.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63] },
+                        { "origin": [7.5, 1.5, -2.25], "size": [0.25, 1, 0.25], "uv": [64, 63] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
