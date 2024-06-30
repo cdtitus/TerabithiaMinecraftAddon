@@ -23,7 +23,7 @@
                 "destroy_chance_modifier": 15,
                 "catch_chance_modifier": 4
             },
-            "minecraft:geometry": "geometry.spruce_cabinet_with_countertop",
+            "minecraft:geometry": "geometry.cabinet_with_countertop",
             "minecraft:map_color": "#5f4a2b",
             "minecraft:material_instances": {
                 "*": {

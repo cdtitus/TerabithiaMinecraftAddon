@@ -27,7 +27,7 @@
                 "catch_chance_modifier": 5,
                 "destroy_chance_modifier": 20
             },
-            "minecraft:geometry": "geometry.spruce_white_chair",
+            "minecraft:geometry": "geometry.white_chair",
             "minecraft:map_color": "#5f4a2b",
             "minecraft:material_instances": {
                 "*": {
