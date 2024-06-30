@@ -19,6 +19,9 @@
         "oak_chair": {
             "textures": "textures/blocks/oak_chair"
         },
+        "oak_dishwasher_with_countertop": {
+            "textures": "textures/blocks/oak_dishwasher_with_countertop"
+        },
         "oak_table": {
             "textures": "textures/blocks/oak_table"
         },
@@ -36,6 +39,9 @@
         },
         "spruce_chair": {
             "textures": "textures/blocks/spruce_chair"
+        },
+        "spruce_dishwasher_with_countertop": {
+            "textures": "textures/blocks/spruce_dishwasher_with_countertop"
         },
         "spruce_table": {
             "textures": "textures/blocks/spruce_table"

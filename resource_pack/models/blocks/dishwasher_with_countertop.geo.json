@@ -1,0 +1,66 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.dishwasher_with_countertop",
+                "texture_width": 64,
+                "texture_height": 64,
+                "visible_bounds_width": 2,
+                "visible_bounds_height": 3,
+                "visible_bounds_offset": [0, 0.5, 0]
+            },
+            "bones": [
+                {
+                    "name": "cabinet_with_countertop",
+                    "pivot": [7, 16, -7],
+                    "cubes": [
+                        {
+                            "origin": [-8, 15.5, -8],
+                            "size": [16, 0.5, 16],
+                            "uv": {
+                                "north": { "uv": [0, 0], "uv_size": [32, 1] },
+                                "east": { "uv": [31, 0], "uv_size": [1, 32] },
+                                "south": { "uv": [0, 31], "uv_size": [32, 1] },
+                                "west": { "uv": [0, 0], "uv_size": [1, 32] },
+                                "up": { "uv": [32, 32], "uv_size": [-32, -32] },
+                                "down": { "uv": [32, 32], "uv_size": [-32, -32] }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "cabinet",
+                    "parent": "cabinet_with_countertop",
+                    "pivot": [7, -14, -5],
+                    "cubes": [
+                        {
+                            "origin": [-8, 1.5, -7],
+                            "size": [16, 14, 15],
+                            "uv": {
+                                "north": { "uv": [0, 32], "uv_size": [25.75, 32] },
+                                "east": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "south": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "west": { "uv": [32, 0], "uv_size": [32, 32] },
+                                "up": { "uv": [64, 32], "uv_size": [-32, -32] },
+                                "down": { "uv": [64, 32], "uv_size": [-32, -32] }
+                            }
+                        },
+                        {
+                            "origin": [-8, 0, -6.25],
+                            "size": [16, 1.5, 14.25],
+                            "uv": {
+                                "north": { "uv": [32, 0], "uv_size": [32, 5] },
+                                "east": { "uv": [32, 0], "uv_size": [32, 5] },
+                                "south": { "uv": [32, 0], "uv_size": [32, 5] },
+                                "west": { "uv": [32, 0], "uv_size": [32, 5] },
+                                "up": { "uv": [64, 32], "uv_size": [-32, -32] },
+                                "down": { "uv": [64, 32], "uv_size": [-32, -32] }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

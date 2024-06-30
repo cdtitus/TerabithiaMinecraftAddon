@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:spruce_dishwasher_with_countertop"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["QQQ", "III", "PPP"],
+        "key": {
+            "Q": {
+                "item": "minecraft:quartz_block"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "P": {
+                "item": "minecraft:spruce_planks"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:spruce_dishwasher_with_countertop"
+        }
+    }
+}
