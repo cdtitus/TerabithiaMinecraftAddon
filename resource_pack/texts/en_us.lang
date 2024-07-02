@@ -1,4 +1,5 @@
 entity.tma:grizzly_bear.name=Grizzly Bear
+entity.tma:block_entity.name=Block Entity
 
 item.spawn_egg.entity.tma:grizzly_bear.name=Spawn Grizzly Bear
 item.tma:heartstealer.name=Heartstealer
@@ -34,3 +35,4 @@ tile.tma:spruce_white_chair.name=Spruce White Chair
 tile.tma:spruce_white_table.name=Spruce White Table
 tile.tma:uranium_ingot.name=Uranium Ingot
 tile.tma:washer.name=Washer
+tile.tma:block_entity.name=Block Entity

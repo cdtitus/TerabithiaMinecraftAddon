@@ -1,7 +1,8 @@
 import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 import { CabinetWithSinkComponent } from './CabinetWithSinkComponent';
 import { TestBlockComponent } from './TestBlockComponent';
-import './DeathBoard'
+import './BlockEntity';
+import './DeathBoard';
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
     initEvent.blockComponentRegistry.registerCustomComponent(

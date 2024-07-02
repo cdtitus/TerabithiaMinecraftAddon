@@ -1,0 +1,28 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tma:block_entity",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["inanimate"]
+            },
+            "minecraft:inventory": {
+                "additional_slots_per_strength": 0,
+                "can_be_siphoned_from": true,
+                "container_type": "container",
+                "inventory_size": 27,
+                "private": false,
+                "restrict_to_owner": false
+            },
+            "minecraft:collision_box": {
+                "height": 1.1,
+                "width": 1.1
+            }
+        }
+    }
+}
