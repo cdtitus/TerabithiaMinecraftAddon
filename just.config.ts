@@ -27,18 +27,18 @@ const bundleTaskOptions: BundleTaskParameters = {
     outfile: path.resolve(__dirname, './dist/scripts/main.js'),
     minifyWhitespace: false,
     sourcemap: true,
-    outputSourcemapPath: path.resolve(__dirname, './dist/debug')
+    outputSourcemapPath: path.resolve(__dirname, './dist/debug'),
 };
 
 const copyTaskOptions: CopyTaskParameters = {
     copyToBehaviorPacks: ['./behavior_pack'],
     copyToScripts: ['./dist/scripts'],
-    copyToResourcePacks: ['./resource_pack']
+    copyToResourcePacks: ['./resource_pack'],
 };
 
 const mcaddonTaskOptions: ZipTaskParameters = {
     ...copyTaskOptions,
-    outputFile: './dist/packages/${projectName}.mcaddon'
+    outputFile: './dist/packages/' + projectName + '.mcaddon',
 };
 
 // Lint
