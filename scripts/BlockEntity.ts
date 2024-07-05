@@ -3,17 +3,12 @@ import {
     BlockComponentPlayerDestroyEvent,
     BlockComponentPlayerInteractEvent,
     BlockCustomComponent,
-    Entity,
-    EntityComponentTypes,
-    EntityInventoryComponent,
     Vector3,
     WorldInitializeBeforeEvent,
     world,
     Dimension,
     Player
 } from '@minecraft/server';
-
-let blockEntity: Entity;
 
 export class BlockEntity implements BlockCustomComponent {
     
@@ -25,17 +20,22 @@ export class BlockEntity implements BlockCustomComponent {
 
     onPlace(event: BlockComponentOnPlaceEvent): void {
         const dimension = <Dimension>event.dimension;
-        const location = <Vector3>event.block.bottomCenter();
-        blockEntity = dimension.spawnEntity('tma:block_entity', location);
+        const location = <Vector3>event.block.center();
+        dimension.spawnEntity('tma:block_entity', location);
     }
 
     onPlayerDestroy(event: BlockComponentPlayerDestroyEvent): void {
-        blockEntity.remove();
+        const dimension = <Dimension>event.dimension;
+        const location = <Vector3>event.block.center();
+        dimension.getEntitiesAtBlockLocation(location).forEach((entity) => {
+            if (entity.typeId == "tma:block_entity") {
+                    entity.remove();
+            }
+        });
     }
 
     onPlayerInteract(event: BlockComponentPlayerInteractEvent): void {
         const player = <Player>event.player;
-        const blockInventory = <EntityInventoryComponent>blockEntity.getComponent(EntityComponentTypes.Inventory);
     }
 }
 
