@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:oak_table_right"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["NS", "LN", "NS"],
+        "key": {
+            "S": {
+                "item": "minecraft:stick"
+            },
+            "L": {
+                "item": "minecraft:oak_slab"
+            },
+            "N": {
+                "item": "minecraft:iron_nugget"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:oak_table_right"
+        }
+    }
+}
