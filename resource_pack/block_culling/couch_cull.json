@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:block_culling_rules": {
+        "description": {
+            "identifier": "tma:couch_cull"
+        },
+        "rules": [
+            {
+                "direction": "west",
+                "geometry_part": {
+                    "bone": "right"
+                }
+            },
+            {
+                "direction": "east",
+                "geometry_part": {
+                    "bone": "left"
+                }
+            }
+        ]
+    }
+}

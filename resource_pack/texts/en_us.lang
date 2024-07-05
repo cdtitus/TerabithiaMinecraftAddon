@@ -8,6 +8,7 @@ item.tma:osiris.name=Osiris
 item.tma:ulysses.name=Ulysses
 
 tile.tma:chair.name=Chair
+tile.tma:couch.name=Couch
 tile.tma:deepslate_uranium_ore.name=Deepslate Uranium Ore
 tile.tma:dryer.name=Dryer
 tile.tma:oak_cabinet.name=Oak Cabinet
@@ -33,6 +34,7 @@ tile.tma:spruce_table_left.name=Spruce Table Left
 tile.tma:spruce_table_right.name=Spruce Table Right
 tile.tma:spruce_white_chair.name=Spruce White Chair
 tile.tma:spruce_white_table.name=Spruce White Table
+tile.tma:toilet.name=Toilet
 tile.tma:uranium_ingot.name=Uranium Ingot
 tile.tma:washer.name=Washer
 tile.tma:block_entity.name=Block Entity

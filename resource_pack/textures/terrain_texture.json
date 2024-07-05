@@ -4,6 +4,9 @@
     "padding": 8,
     "num_mip_levels": 4,
     "texture_data": {
+        "couch": {
+            "textures": "textures/blocks/couch"
+        },
         "deepslate_uranium_ore": {
             "textures": "textures/blocks/deepslate_uranium_ore"
         },
@@ -63,6 +66,9 @@
         },
         "spruce_white_table": {
             "textures": "textures/blocks/spruce_white_table"
+        },
+        "toilet": {
+            "textures": "textures/blocks/toilet"
         },
         "washer": {
             "textures": "textures/blocks/washer"
