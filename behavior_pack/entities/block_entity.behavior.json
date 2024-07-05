@@ -19,9 +19,18 @@
                 "private": false,
                 "restrict_to_owner": false
             },
+            "minecraft:fire_immune": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
             "minecraft:collision_box": {
-                "height": 1.1,
-                "width": 1.1
+                "height": 0,
+                "width": 0
             }
         }
     }
