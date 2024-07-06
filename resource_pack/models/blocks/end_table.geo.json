@@ -7,8 +7,8 @@
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
 			},
 			"bones": [
 				{
@@ -126,8 +126,8 @@
 								"east": {"uv": [32, 0], "uv_size": [32, 12]},
 								"south": {"uv": [32, 0], "uv_size": [32, 12]},
 								"west": {"uv": [32, 0], "uv_size": [32, 12]},
-								"up": {"uv": [64, 12], "uv_size": [-32, -12]},
-								"down": {"uv": [64, 12], "uv_size": [-32, -12]}
+								"up": {"uv": [32, 12], "uv_size": [-32, -12]},
+								"down": {"uv": [32, 12], "uv_size": [-32, -12]}
 							}
 						},
 						{
@@ -150,8 +150,8 @@
 								"east": {"uv": [32, 0], "uv_size": [32, 12]},
 								"south": {"uv": [32, 0], "uv_size": [32, 12]},
 								"west": {"uv": [32, 0], "uv_size": [32, 12]},
-								"up": {"uv": [64, 12], "uv_size": [-32, -12]},
-								"down": {"uv": [64, 12], "uv_size": [-32, -12]}
+								"up": {"uv": [32, 12], "uv_size": [-32, -12]},
+								"down": {"uv": [32, 12], "uv_size": [-32, -12]}
 							}
 						}
 					]
