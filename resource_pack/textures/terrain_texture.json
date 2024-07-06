@@ -72,6 +72,9 @@
         },
         "washer": {
             "textures": "textures/blocks/washer"
+        },
+        "white_light_block": {
+            "textures": "textures/blocks/white_light_block"
         }
     }
 }
