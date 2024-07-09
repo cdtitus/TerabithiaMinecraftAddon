@@ -27,7 +27,7 @@
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "well_covered",
-					"render_method": "alpha_test"
+					"render_method": "opaque"
 				}
 			},
 			"minecraft:map_color": "#ffffff"

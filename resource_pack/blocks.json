@@ -33,7 +33,12 @@
         "sound": "wood"
     },
     "tma:well": {
-		"sound": "stone"
+		"sound": "stone",
+        "textures": {
+            "down": "well_side",
+            "side": "well_side",
+            "up": "well_top"
+        }
 	},
     "tma:well_covered": {
 		"sound": "stone"

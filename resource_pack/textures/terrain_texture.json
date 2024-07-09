@@ -73,11 +73,14 @@
         "washer": {
             "textures": "textures/blocks/washer"
         },
-        "well": {
-			"textures": "textures/blocks/well.png"
-		},
         "well_covered": {
 			"textures": "textures/blocks/well_covered.png"
+		},
+        "well_side": {
+			"textures": "textures/blocks/cobblestone"
+		},
+        "well_top": {
+			"textures": "textures/blocks/well_top.png"
 		},
         "white_light_block": {
             "textures": "textures/blocks/white_light_block"

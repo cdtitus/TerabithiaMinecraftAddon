@@ -18,13 +18,6 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 30
 			},
-			"minecraft:geometry": "geometry.well",
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "well",
-					"render_method": "alpha_test"
-				}
-			},
 			"minecraft:map_color": "#ffffff"
 		}
 	}
