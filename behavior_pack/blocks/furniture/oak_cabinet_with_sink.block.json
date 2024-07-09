@@ -13,7 +13,7 @@
             }
         },
         "components": {
-            "minecraft:custom_components": ["content:cabinet_with_sink_component"],
+            "minecraft:custom_components": ["tma:water_source"],
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 20
             },

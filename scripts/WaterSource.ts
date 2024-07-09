@@ -9,7 +9,7 @@ import {
 const BUCKET: string = 'minecraft:bucket';
 const WATER_BUCKET: string = 'minecraft:water_bucket';
 
-export class CabinetWithSinkComponent implements BlockCustomComponent {
+export class WaterSource implements BlockCustomComponent {
     constructor() {
         this.onPlayerInteract = this.onPlayerInteract.bind(this);
     }

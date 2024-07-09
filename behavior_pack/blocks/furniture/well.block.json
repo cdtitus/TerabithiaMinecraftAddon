@@ -14,7 +14,7 @@
 		},
 		"components": {
 			"minecraft:display_name": "Well",
-			"minecraft:custom_components": ["content:cabinet_with_sink_component"],
+			"minecraft:custom_components": ["tma:water_source"],
 			"minecraft:collision_box": true,
 			"minecraft:selection_box": true,
 			"minecraft:destructible_by_mining": {
