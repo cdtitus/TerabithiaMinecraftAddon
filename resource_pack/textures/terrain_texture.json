@@ -76,6 +76,9 @@
         "well": {
 			"textures": "textures/blocks/well.png"
 		},
+        "well_covered": {
+			"textures": "textures/blocks/well_covered.png"
+		},
         "white_light_block": {
             "textures": "textures/blocks/white_light_block"
         }

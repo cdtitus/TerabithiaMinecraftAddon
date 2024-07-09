@@ -35,6 +35,9 @@
     "tma:well": {
 		"sound": "stone"
 	},
+    "tma:well_covered": {
+		"sound": "stone"
+	},
     "tma:spruce_white_chair": {
         "sound": "wood"
     },

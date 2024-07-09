@@ -2,23 +2,30 @@
     "format_version": "1.20.81",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tma:well"
+            "identifier": "tma:well_covered"
         },
         "tags": ["crafting_table"],
         "pattern": [
-            "S S", 
-            "SSS"
+            "PPP", 
+            "PLP", 
+            "PSP"
         ],
         "key": {
             "S": {
                 "item": "minecraft:cobblestone"
+            },
+            "P": {
+                "tag": "minecraft:planks"
+            },
+            "L": {
+                "item": "minecraft:lead"
             }
         },
         "unlock": {
             "context": "AlwaysUnlocked"
         },
         "result": {
-            "item": "tma:well"
+            "item": "tma:well_covered"
         }
     }
 }
