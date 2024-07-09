@@ -32,7 +32,7 @@
     "tma:spruce_table": {
         "sound": "wood"
     },
-    "well": {
+    "tma:well": {
 		"sound": "stone"
 	},
     "tma:spruce_white_chair": {
