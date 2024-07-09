@@ -15,7 +15,7 @@
                 "item": "minecraft:cobblestone"
             },
             "P": {
-                "item": "minecraft:oak_planks"
+                "tag": "minecraft:planks"
             },
             "L": {
                 "item": "minecraft:lead"

@@ -13,6 +13,7 @@
 			}
 		},
 		"components": {
+			"minecraft:display_name": "Well",
 			"minecraft:custom_components": ["content:cabinet_with_sink_component"],
 			"minecraft:collision_box": true,
 			"minecraft:selection_box": true,
