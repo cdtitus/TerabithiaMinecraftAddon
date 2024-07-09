@@ -32,6 +32,9 @@
     "tma:spruce_table": {
         "sound": "wood"
     },
+    "well": {
+		"sound": "stone"
+	},
     "tma:spruce_white_chair": {
         "sound": "wood"
     },
