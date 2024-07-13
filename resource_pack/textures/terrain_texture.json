@@ -4,14 +4,14 @@
     "padding": 8,
     "num_mip_levels": 4,
     "texture_data": {
-        "couch": {
-            "textures": "textures/blocks/couch"
-        },
         "deepslate_uranium_ore": {
             "textures": "textures/blocks/deepslate_uranium_ore"
         },
         "dryer": {
             "textures": "textures/blocks/dryer"
+        },
+        "gray_couch": {
+            "textures": "textures/blocks/gray_couch"
         },
         "oak_cabinet": {
             "textures": "textures/blocks/oak_cabinet"

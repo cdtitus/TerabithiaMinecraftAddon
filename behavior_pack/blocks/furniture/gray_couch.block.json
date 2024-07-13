@@ -2,7 +2,7 @@
     "format_version": "1.21.0",
     "minecraft:block": {
         "description": {
-            "identifier": "tma:couch",
+            "identifier": "tma:gray_couch",
             "menu_category": {
                 "category": "construction"
             },
@@ -33,7 +33,7 @@
             "minecraft:map_color": "#5f4a2b",
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "couch"
+                    "texture": "gray_couch"
                 }
             }
         },
