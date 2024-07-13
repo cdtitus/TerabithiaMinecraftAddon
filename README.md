@@ -1,7 +1,7 @@
 
 # Terabithia Minecraft Addon (Bedrock)
 
-A work in progress addon for our community Minecraft realm. Development is currently on Preview to be ready for future a Minecraft version release.
+A work in progress addon for our community Minecraft realm. Development is currently on Preview to be ready for a future Minecraft version release.
 
 ## Current Environment
 Preview (v1.21.20.22)
