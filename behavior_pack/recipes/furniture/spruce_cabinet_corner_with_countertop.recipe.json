@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:spruce_cabinet_corner_with_countertop"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["QQQ", "NPP", "NPP"],
+        "key": {
+            "Q": {
+                "item": "minecraft:quartz_block"
+            },
+            "N": {
+                "item": "minecraft:iron_nugget"
+            },
+            "P": {
+                "item": "minecraft:spruce_planks"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:spruce_cabinet_corner_with_countertop"
+        }
+    }
+}
