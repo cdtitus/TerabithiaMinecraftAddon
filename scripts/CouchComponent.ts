@@ -6,8 +6,6 @@ import {
     BlockPermutation
 } from '@minecraft/server';
 
-const COUCH: string = 'tma:couch';
-
 export class CouchBlockComponent implements BlockCustomComponent {
     constructor() {
         this.onPlace = this.onPlace.bind(this);
@@ -19,32 +17,32 @@ export class CouchBlockComponent implements BlockCustomComponent {
         const direction = <string>permutation.getState('minecraft:cardinal_direction');
 
         this._setBlockPermutation(event.block, direction);
-        this._setAdjacentBlockPermutations(event.block, direction);
+        this._setAdjacentBlockPermutations(event.block, permutation.type.id, direction);
     }
 
     onPlayerDestroy(event: BlockComponentPlayerDestroyEvent): void {
         const permutation = event.destroyedBlockPermutation;
         const direction = <string>permutation.getState('minecraft:cardinal_direction');
 
-        this._setAdjacentBlockPermutations(event.block, direction);
+        this._setAdjacentBlockPermutations(event.block, permutation.type.id, direction);
     }
 
     private _setBlockPermutation(block: Block, blockDirection: string): void {
-        if (block.typeId === COUCH) {   
-            const states = {
-                'tma:couch_state': this._resolveCouchState(block, blockDirection),
-                'minecraft:cardinal_direction': blockDirection,
-            };
-            block.setPermutation(BlockPermutation.resolve(COUCH, states));
-        }
+        const states = {
+            'tma:couch_state': this._resolveCouchState(block, blockDirection),
+            'minecraft:cardinal_direction': blockDirection,
+        };
+        block.setPermutation(BlockPermutation.resolve(block.typeId, states));
     }
 
-    private _setAdjacentBlockPermutations(block: Block, blockDirection: string): void {
+    private _setAdjacentBlockPermutations(block: Block, blockType: string, blockDirection: string): void {
         const leftBlock = this._getLeftBlock(block, blockDirection);
-        const rightBlock = this._getRightBlock(block, blockDirection);
+        if (leftBlock?.typeId === blockType)
+            this._setBlockPermutation(leftBlock, blockDirection);
 
-        this._setBlockPermutation(<Block>leftBlock, blockDirection);
-        this._setBlockPermutation(<Block>rightBlock, blockDirection);
+        const rightBlock = this._getRightBlock(block, blockDirection);
+        if (rightBlock?.typeId === blockType)
+            this._setBlockPermutation(rightBlock, blockDirection);
     }
 
     private _resolveCouchState(block: Block, blockDirection: string): string {
@@ -52,9 +50,9 @@ export class CouchBlockComponent implements BlockCustomComponent {
         const rightBlock = this._getRightBlock(block, blockDirection);
         
         let state = 'left';
-        if (leftBlock?.typeId === COUCH && rightBlock?.typeId === COUCH)
+        if (leftBlock?.typeId === block.typeId && rightBlock?.typeId === block.typeId)
             state = 'middle';
-        if (leftBlock?.typeId === COUCH && rightBlock?.typeId !== COUCH)
+        if (leftBlock?.typeId === block.typeId && rightBlock?.typeId !== block.typeId)
             state = 'right';
 
         return state;
