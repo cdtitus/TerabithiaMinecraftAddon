@@ -4,6 +4,7 @@ import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 import { CouchBlockComponent } from './CouchComponent';
 import { TestBlockComponent } from './TestBlockComponent';
 import { WaterSource } from './WaterSource';
+import { Teleporter } from './Teleporter';
 
 import './BlockEntity';
 import './DeathBoard';
@@ -15,6 +16,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEv
         .registerCustomComponent('content:test_component', new TestBlockComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:water_source', new WaterSource());
+    initEvent.blockComponentRegistry
+        .registerCustomComponent('tma:teleporter', new Teleporter());
 });
 
 function mainTick() {
