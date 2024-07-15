@@ -4,8 +4,6 @@ import {
     BlockComponentPlayerInteractEvent,
     BlockCustomComponent,
     Vector3,
-    WorldInitializeBeforeEvent,
-    world,
     Dimension,
     Player
 } from '@minecraft/server';
@@ -38,7 +36,3 @@ export class BlockEntity implements BlockCustomComponent {
         const player = <Player>event.player;
     }
 }
-
-world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
-    initEvent.blockComponentRegistry.registerCustomComponent('tma:block_entity', new BlockEntity());
-});
