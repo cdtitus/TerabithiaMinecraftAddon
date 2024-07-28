@@ -41,8 +41,10 @@ export class Teleporter implements BlockCustomComponent {
         const location = <Vector3>event.block.above();
         const index = this.locations.indexOf(location);
         
-        this.locations.splice(index, 1);
-        this.names.splice(index, 1);
+        if (index > -1) {
+            this.locations.splice(index, 1);
+            this.names.splice(index, 1);
+        }
     }
 
     onPlayerInteract(event: BlockComponentPlayerInteractEvent): void {
