@@ -2,7 +2,7 @@
     "format_version": "1.20.81",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "tma:white_light_block_half"
+            "identifier": "tma:white_light_slab"
         },
         "tags": ["crafting_table"],
         "pattern": ["GRG", "GGG", ""],
@@ -18,7 +18,7 @@
             "context": "AlwaysUnlocked"
         },
         "result": {
-            "item": "tma:white_light_block_half"
+            "item": "tma:white_light_slab"
         }
     }
 }

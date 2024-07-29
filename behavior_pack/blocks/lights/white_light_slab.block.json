@@ -2,17 +2,21 @@
     "format_version": "1.21.0",
     "minecraft:block": {
         "description": {
-            "identifier": "tma:white_light_block_half",
+            "identifier": "tma:white_light_slab",
             "menu_category": {
                 "category": "construction"
             }
         },
         "components": {
+            "minecraft:collision_box": {
+                "origin": [-8, 8, -8],
+                "size": [16, 8, 16]
+            },
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 15
             },
             "minecraft:destructible_by_mining": {
-                "seconds_to_destroy": 1
+                "seconds_to_destroy": 0.5
             },
             "minecraft:flammable": {
                 "catch_chance_modifier": 5,
@@ -23,9 +27,14 @@
             "minecraft:light_emission": 15,
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "white_light_block",
+                    "ambient_occlusion": false,
+                    "texture": "white_light",
                     "render_method": "alpha_test"
                 }
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 8, -8],
+                "size": [16, 8, 16]
             }
         }
     }
