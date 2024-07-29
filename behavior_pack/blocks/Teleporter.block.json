@@ -12,9 +12,21 @@
             "minecraft:custom_components": ["tma:teleporter"],
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "teleporter"
+                    "texture": "teleporter",
+                    "render_method": "opaque"
                 }
-            }
+            },
+            "minecraft:geometry": "geometry.teleporter",
+			"minecraft:light_emission": 7,
+			"minecraft:map_color": "#ffffff",
+            "minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 200
+			}
         }
     }
 }

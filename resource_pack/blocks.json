@@ -32,6 +32,9 @@
     "tma:spruce_table": {
         "sound": "wood"
     },
+    "teleporter": {
+		"sound": "metal"
+	},
     "tma:well": {
 		"sound": "stone",
         "textures": {

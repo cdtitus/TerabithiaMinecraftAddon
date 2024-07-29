@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "tma:teleporter"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			" N ",
+			" E ",
+			"NLN"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:lodestone"
+			},
+			"E": {
+				"item": "minecraft:end_crystal"
+			},
+            "N": {
+				"item": "minecraft:netherite_ingot"
+			}
+		},
+		"unlock": {
+            "context": "AlwaysUnlocked"
+        },
+		"result": {
+			"item": "tma:teleporter"
+		}
+	}
+}

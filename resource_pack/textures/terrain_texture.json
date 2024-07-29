@@ -67,6 +67,9 @@
         "spruce_white_table": {
             "textures": "textures/blocks/spruce_white_table"
         },
+        "teleporter": {
+			"textures": "textures/blocks/teleporter.png"
+		},
         "toilet": {
             "textures": "textures/blocks/toilet"
         },
