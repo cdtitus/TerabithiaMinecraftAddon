@@ -86,7 +86,7 @@
 			"textures": "textures/blocks/well_top.png"
 		},
         "white_light": {
-            "textures": "textures/blocks/white_light_block"
+            "textures": "textures/blocks/white_light"
         }
     }
 }
