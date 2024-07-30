@@ -1,7 +1,7 @@
 import { BlockComponentStepOnEvent, BlockCustomComponent, BlockPermutation } from '@minecraft/server';
 import { MinecraftBlockTypes } from '@minecraft/vanilla-data';
 
-export class TestBlockComponent implements BlockCustomComponent {
+export class TestComponent implements BlockCustomComponent {
     constructor() {
         this.onStepOn = this.onStepOn.bind(this);
     }

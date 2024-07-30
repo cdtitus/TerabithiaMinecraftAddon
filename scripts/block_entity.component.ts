@@ -8,7 +8,7 @@ import {
     Player
 } from '@minecraft/server';
 
-export class BlockEntity implements BlockCustomComponent {
+export class BlockEntityComponent implements BlockCustomComponent {
     
     constructor() {
         this.onPlace = this.onPlace.bind(this);

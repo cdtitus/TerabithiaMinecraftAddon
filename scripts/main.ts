@@ -1,26 +1,26 @@
 import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 
 // custom components
-import { BlockEntity } from './BlockEntity';
-import { CouchBlockComponent } from './CouchComponent';
+import { BlockEntityComponent } from './block_entity.component';
+import { CouchComponent } from './couch.component';
 import { LightComponent } from './light.component';
-import { Teleporter } from './Teleporter';
-import { TestBlockComponent } from './TestBlockComponent';
-import { WaterSource } from './WaterSource';
+import { TeleporterComponent } from './teleporter.component';
+import { TestComponent } from './test.component';
+import { WaterSource } from './water_source.component';
 
 import './DeathBoard';
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
     initEvent.blockComponentRegistry
-        .registerCustomComponent('tma:block_entity', new BlockEntity());
+        .registerCustomComponent('tma:block_entity', new BlockEntityComponent());
     initEvent.blockComponentRegistry
-        .registerCustomComponent('content:couch_component', new CouchBlockComponent());
+        .registerCustomComponent('content:couch_component', new CouchComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('content:light_component', new LightComponent());
     initEvent.blockComponentRegistry
-        .registerCustomComponent('tma:teleporter', new Teleporter());
+        .registerCustomComponent('tma:teleporter', new TeleporterComponent());
     initEvent.blockComponentRegistry
-        .registerCustomComponent('content:test_component', new TestBlockComponent());
+        .registerCustomComponent('content:test_component', new TestComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:water_source', new WaterSource());
 });

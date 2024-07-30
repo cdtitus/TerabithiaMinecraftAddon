@@ -8,7 +8,7 @@ import {
 } from '@minecraft/server';
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 
-export class Teleporter implements BlockCustomComponent {
+export class TeleporterComponent implements BlockCustomComponent {
 
     locations: Vector3[] = []
     names: string[] = []

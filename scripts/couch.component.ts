@@ -6,7 +6,7 @@ import {
     BlockPermutation
 } from '@minecraft/server';
 
-export class CouchBlockComponent implements BlockCustomComponent {
+export class CouchComponent implements BlockCustomComponent {
     constructor() {
         this.onPlace = this.onPlace.bind(this);
         this.onPlayerDestroy = this.onPlayerDestroy.bind(this);
