@@ -5,13 +5,33 @@
             "identifier": "tma:white_light_slab",
             "menu_category": {
                 "category": "construction"
+            },
+            "states": {
+                "tma:light_state": ["on", "off"]
             }
         },
+        "permutations": [
+            {
+                "condition": "q.block_state('tma:light_state') == 'on'",
+                "components": {
+                    "minecraft:light_emission": 15
+                }
+            },
+            {
+                "condition": "q.block_state('tma:light_state') == 'off'",
+                "components": {
+                    "minecraft:light_emission": 0
+                }
+            }
+        ],
         "components": {
             "minecraft:collision_box": {
                 "origin": [-8, 8, -8],
                 "size": [16, 8, 16]
             },
+            "minecraft:custom_components": [
+                "content:light_component"
+            ],
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 15
             },

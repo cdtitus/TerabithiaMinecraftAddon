@@ -3,6 +3,7 @@ import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 // custom components
 import { BlockEntity } from './BlockEntity';
 import { CouchBlockComponent } from './CouchComponent';
+import { LightComponent } from './light.component';
 import { Teleporter } from './Teleporter';
 import { TestBlockComponent } from './TestBlockComponent';
 import { WaterSource } from './WaterSource';
@@ -14,6 +15,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEv
         .registerCustomComponent('tma:block_entity', new BlockEntity());
     initEvent.blockComponentRegistry
         .registerCustomComponent('content:couch_component', new CouchBlockComponent());
+    initEvent.blockComponentRegistry
+        .registerCustomComponent('content:light_component', new LightComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:teleporter', new Teleporter());
     initEvent.blockComponentRegistry
