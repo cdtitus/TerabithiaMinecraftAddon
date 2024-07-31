@@ -1,9 +1,9 @@
 import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 
-// custom components
 import { BlockEntityComponent } from './block_entity.component';
 import { CouchComponent } from './couch.component';
 import { LightComponent } from './light.component';
+import { SnowBlowerComponent } from './snow_blower.component';
 import { TeleporterComponent } from './teleporter.component';
 import { TestComponent } from './test.component';
 import { WaterSource } from './water_source.component';
@@ -23,6 +23,9 @@ world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEv
         .registerCustomComponent('content:test_component', new TestComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:water_source', new WaterSource());
+
+    initEvent.itemComponentRegistry
+        .registerCustomComponent("tma:snow_blower_component", new SnowBlowerComponent());
 });
 
 function mainTick() {

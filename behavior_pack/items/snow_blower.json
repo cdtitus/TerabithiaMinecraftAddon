@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tma:snow_blower"
+		},
+		"components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "arrow"
+                }
+            },
+			"minecraft:liquid_clipped": true,
+			"minecraft:custom_components": [
+				"tma:snow_blower_component"
+			],
+			"minecraft:use_modifiers": {
+				"use_duration": 1,
+				"movement_modifier": 0.35
+			},
+			"minecraft:use_animation": "drink"
+		}
+	}
+}
