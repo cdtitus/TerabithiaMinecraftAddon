@@ -5,10 +5,12 @@ import { CouchComponent } from './couch.component';
 import { LightComponent } from './light.component';
 import { SnowBlowerComponent } from './snow_blower.component';
 import { TeleporterComponent } from './teleporter.component';
+import { TelevisionComponent } from './television.component';
 import { TestComponent } from './test.component';
 import { WaterSource } from './water_source.component';
 
 import './DeathBoard';
+
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
     initEvent.blockComponentRegistry
@@ -19,6 +21,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEv
         .registerCustomComponent('content:light_component', new LightComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:teleporter', new TeleporterComponent());
+    initEvent.blockComponentRegistry
+        .registerCustomComponent('content:television_component', new TelevisionComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('content:test_component', new TestComponent());
     initEvent.blockComponentRegistry

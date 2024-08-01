@@ -70,6 +70,15 @@
         "teleporter": {
 			"textures": "textures/blocks/teleporter.png"
 		},
+        "television_0": {
+			"textures": "textures/blocks/television_0.png"
+		},
+        "television_1": {
+			"textures": "textures/blocks/television_1.png"
+		},
+        "television_2": {
+			"textures": "textures/blocks/television_2.png"
+		},
         "toilet": {
             "textures": "textures/blocks/toilet"
         },

@@ -4,6 +4,10 @@
 		"tma.dingdong": {
 			"category": "neutral",
 			"sounds": ["sounds/dingdong"]
+		},
+		"tma.television": {
+			"category": "neutral",
+			"sounds": ["sounds/television"]
 		}
 	}
 }
