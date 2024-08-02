@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.81",
+    "format_version": "1.20.20",
     "minecraft:item": {
         "description": {
             "identifier": "tma:hightower",
@@ -36,19 +36,6 @@
                         "repair_amount": 2100
                     }
                 ]
-            },
-            "minecraft:shooter": {
-                "ammunition": [
-                    {
-                        "item": "tma:big_arrow",
-                        "use_offhand": false,
-                        "search_inventory": true,
-                        "use_in_creative": false
-                    }
-                ],
-                "max_draw_duration": 0,
-                "scale_power_by_draw_duration": false,
-                "charge_on_draw": false
             },
             "minecraft:use_modifiers": {
                 "use_duration": 0.2

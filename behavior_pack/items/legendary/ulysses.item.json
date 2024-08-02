@@ -1,10 +1,13 @@
 {
-    "format_version": "1.21.10",
+    "format_version": "1.20.20",
     "minecraft:item": {
         "description": {
             "identifier": "tma:ulysses"
         },
         "components": {
+            "minecraft:damage": {
+				"value": 20
+			},
             "minecraft:display_name": {
                 "value": "Ulysses"
             },
