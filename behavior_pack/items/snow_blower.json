@@ -5,11 +5,7 @@
 			"identifier": "tma:snow_blower"
 		},
 		"components": {
-            "minecraft:icon": {
-                "textures": {
-                    "default": "arrow"
-                }
-            },
+            "minecraft:icon": "arrow",
 			"minecraft:liquid_clipped": true,
 			"minecraft:use_modifiers": {
 				"use_duration": 1,

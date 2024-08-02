@@ -10,10 +10,7 @@
 		},
 		"components": {
 			"minecraft:max_stack_size": 1,
-			"minecraft:icon": {
-				"textures": {
-					"default": "emerald_leggings" }
-			},
+			"minecraft:icon": "emerald_leggings",
 			"minecraft:display_name": {
 				"value": "Emerald Leggings"
 			},

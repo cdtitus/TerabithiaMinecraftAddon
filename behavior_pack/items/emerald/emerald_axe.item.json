@@ -28,10 +28,7 @@
 			"minecraft:display_name": {
 				"value": "Emerald axe"
 			},
-			"minecraft:icon": {
-				"textures": {
-					"default": "emerald_axe" }
-			},
+			"minecraft:icon": "emerald_axe",
 			"minecraft:durability": {
 				"max_durability": 500,
 				"damage_chance": {

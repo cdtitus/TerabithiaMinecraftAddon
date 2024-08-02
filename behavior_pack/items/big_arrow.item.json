@@ -13,11 +13,7 @@
             "minecraft:display_name": {
                 "value": "Big Arrow"
             },
-            "minecraft:icon": {
-                "textures": {
-                    "default": "arrow"
-                }
-            },
+            "minecraft:icon": "arrow",
             "minecraft:projectile": {
                 "minimum_critical_power": 0.0,
                 "projectile_entity": "tma:big_arrow"

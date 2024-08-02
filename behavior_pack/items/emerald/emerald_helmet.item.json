@@ -10,10 +10,7 @@
 		},
 		"components": {
 			"minecraft:max_stack_size": 1,
-			"minecraft:icon": {
-				"textures": {
-					"default": "emerald_helmet" }
-			},
+			"minecraft:icon": "emerald_helmet",
 			"minecraft:display_name": {
 				"value": "Emerald Helmet"
 			},

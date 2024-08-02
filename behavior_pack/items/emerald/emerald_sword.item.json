@@ -17,10 +17,7 @@
 			"minecraft:display_name": {
 				"value": "Emerald Sword"
 			},
-			"minecraft:icon": {
-				"textures": {
-					"default": "emerald_sword" }
-			},
+			"minecraft:icon": "emerald_sword",
 			"minecraft:durability": {
 				"max_durability": 500,
 				"damage_chance": {

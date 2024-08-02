@@ -28,10 +28,7 @@
 			"minecraft:display_name": {
 				"value": "Emerald hoe"
 			},
-			"minecraft:icon": {
-				"textures": {
-					"default": "emerald_hoe" }
-			},
+			"minecraft:icon": "emerald_hoe",
 			"minecraft:durability": {
 				"max_durability": 500,
 				"damage_chance": {
