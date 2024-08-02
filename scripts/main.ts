@@ -10,6 +10,7 @@ import { TestComponent } from './test.component';
 import { WaterSource } from './water_source.component';
 
 import './DeathBoard';
+import { TableComponent } from './table.component';
 
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
@@ -19,6 +20,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEv
         .registerCustomComponent('content:couch_component', new CouchComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('content:light_component', new LightComponent());
+    initEvent.blockComponentRegistry
+        .registerCustomComponent('content:table_component', new TableComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:teleporter', new TeleporterComponent());
     initEvent.blockComponentRegistry

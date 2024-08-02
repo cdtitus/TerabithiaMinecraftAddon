@@ -7,7 +7,7 @@ import {
 } from '@minecraft/server';
 import { BlockService } from './block.service';
 
-export class CouchComponent implements BlockCustomComponent {
+export class TableComponent implements BlockCustomComponent {
     constructor() {
         this.onPlace = this.onPlace.bind(this);
         this.onPlayerDestroy = this.onPlayerDestroy.bind(this);
@@ -30,7 +30,7 @@ export class CouchComponent implements BlockCustomComponent {
 
     private _setBlockPermutation(block: Block, blockDirection: string): void {
         const states = {
-            'tma:couch_state': this._resolveCouchState(block, blockDirection),
+            'tma:table_state': this._resolveTableState(block, blockDirection),
             'minecraft:cardinal_direction': blockDirection,
         };
         block.setPermutation(BlockPermutation.resolve(block.typeId, states));
@@ -46,14 +46,14 @@ export class CouchComponent implements BlockCustomComponent {
             this._setBlockPermutation(rightBlock, blockDirection);
     }
 
-    private _resolveCouchState(block: Block, blockDirection: string): string {
+    private _resolveTableState(block: Block, blockDirection: string): string {
         const leftBlock = BlockService.getLeftBlock(block, blockDirection);
         const rightBlock = BlockService.getRightBlock(block, blockDirection);
         
-        let state = 'left';
-        if (leftBlock?.typeId === block.typeId && rightBlock?.typeId === block.typeId)
-            state = 'middle';
-        if (leftBlock?.typeId === block.typeId && rightBlock?.typeId !== block.typeId)
+        let state = 'single';
+        if (rightBlock?.typeId === block.typeId)
+            state = 'left';
+        if (leftBlock?.typeId === block.typeId)
             state = 'right';
 
         return state;

@@ -16,5 +16,7 @@ export class LightComponent implements BlockCustomComponent {
 
         const states = {'tma:light_state': newState};
         event.block.setPermutation(BlockPermutation.resolve(event.block.typeId, states));
+
+        event.player?.playSound('tma.light_switch');
     }
 }

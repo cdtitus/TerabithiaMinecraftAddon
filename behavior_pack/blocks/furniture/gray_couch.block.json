@@ -16,7 +16,9 @@
             }
         },
         "components": {
-            "minecraft:custom_components": ["content:couch_component"],
+            "minecraft:custom_components": [
+                "content:couch_component"
+            ],
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 10
             },
@@ -26,9 +28,6 @@
             "minecraft:flammable": {
                 "catch_chance_modifier": 7,
                 "destroy_chance_modifier": 25
-            },
-            "minecraft:geometry": {
-                "identifier": "geometry.couch_mid"
             },
             "minecraft:map_color": "#5f4a2b",
             "minecraft:material_instances": {
