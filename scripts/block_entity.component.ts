@@ -18,7 +18,7 @@ export class BlockEntityComponent implements BlockCustomComponent {
 
     onPlace(event: BlockComponentOnPlaceEvent): void {
         const dimension = <Dimension>event.dimension;
-        const location = <Vector3>event.block.center();
+        const location = <Vector3>event.block.bottomCenter();
         dimension.spawnEntity('tma:block_entity', location);
     }
 

@@ -2,7 +2,17 @@
     "format_version": "1.21.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "tma:block_entity"
+            "identifier": "tma:block_entity",
+            "geometry": {
+                "default": "geometry.shulker"
+            },
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/shulker/shulker_black"
+            },
+            "render_controllers": ["controller.render.default"]
         }
     }
 }
