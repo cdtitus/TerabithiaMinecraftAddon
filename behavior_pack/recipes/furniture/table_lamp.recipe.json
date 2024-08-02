@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.81",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tma:table_lamp"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["W", "R", "I"],
+        "key": {
+            "W": {
+                "item": "minecraft:white_wool"
+            },
+            "R": {
+                "item": "minecraft:redstone"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "unlock": {
+            "context": "AlwaysUnlocked"
+        },
+        "result": {
+            "item": "tma:table_lamp"
+        }
+    }
+}

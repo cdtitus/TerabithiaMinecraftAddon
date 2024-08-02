@@ -67,6 +67,12 @@
         "spruce_white_table": {
             "textures": "textures/blocks/spruce_white_table"
         },
+        "table_lamp_on": {
+			"textures": "textures/blocks/table_lamp_on.png"
+		},
+        "table_lamp_off": {
+			"textures": "textures/blocks/table_lamp_off.png"
+		},
         "teleporter": {
 			"textures": "textures/blocks/teleporter.png"
 		},

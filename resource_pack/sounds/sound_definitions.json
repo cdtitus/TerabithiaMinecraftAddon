@@ -5,6 +5,10 @@
 			"category": "neutral",
 			"sounds": ["sounds/dingdong"]
 		},
+		"tma.light_switch": {
+			"category": "neutral",
+			"sounds": ["sounds/light_switch"]
+		},
 		"tma.television": {
 			"category": "neutral",
 			"sounds": ["sounds/television"]

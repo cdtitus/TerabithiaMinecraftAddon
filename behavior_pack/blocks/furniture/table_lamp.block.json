@@ -1,0 +1,57 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "tma:table_lamp",
+            "menu_category": {
+                "category": "construction"
+            },
+            "states": {
+                "tma:light_state": ["on", "off"]
+            }
+        },
+        "components": {
+            "minecraft:custom_components": [
+                "content:light_component"
+            ],
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 30
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:flammable": {
+                "catch_chance_modifier": 3,
+                "destroy_chance_modifier": 10
+            },
+            "minecraft:geometry": "geometry.table_lamp",
+            "minecraft:map_color": "#5f4a2b"
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('tma:light_state') == 'on'",
+                "components": {
+                    "minecraft:light_emission": 15,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "table_lamp_on",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('tma:light_state') == 'off'",
+                "components": {
+                    "minecraft:light_emission": 0,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "table_lamp_off",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
