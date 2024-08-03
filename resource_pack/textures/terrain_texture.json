@@ -102,6 +102,9 @@
 		},
         "white_light": {
             "textures": "textures/blocks/white_light"
+        },
+        "window_pane": {
+            "textures": "textures/blocks/window_pane"
         }
     }
 }
