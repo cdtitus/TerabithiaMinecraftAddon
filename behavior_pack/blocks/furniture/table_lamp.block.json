@@ -7,7 +7,7 @@
                 "category": "construction"
             },
             "states": {
-                "tma:light_state": ["on", "off"]
+                "tma:light_state": ["high", "low", "off"]
             }
         },
         "components": {
@@ -29,9 +29,21 @@
         },
         "permutations": [
             {
-                "condition": "q.block_state('tma:light_state') == 'on'",
+                "condition": "q.block_state('tma:light_state') == 'high'",
                 "components": {
                     "minecraft:light_emission": 15,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "table_lamp_on",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('tma:light_state') == 'low'",
+                "components": {
+                    "minecraft:light_emission": 10,
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "table_lamp_on",

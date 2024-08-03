@@ -12,7 +12,14 @@ export class LightComponent implements BlockCustomComponent {
     onPlayerInteract(event: BlockComponentPlayerInteractEvent): void {
         const permutation = event.block.permutation;
         const curState = <string>permutation.getState('tma:light_state');
-        const newState = curState === 'on' ? 'off' : 'on';
+
+        let newState = '';
+        if (curState === 'off')
+            newState = 'low';
+        if (curState === 'low')
+            newState = 'high';
+        if (curState === 'high')
+            newState = 'off';
 
         const states = {'tma:light_state': newState};
         event.block.setPermutation(BlockPermutation.resolve(event.block.typeId, states));
