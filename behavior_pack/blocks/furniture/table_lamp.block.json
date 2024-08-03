@@ -11,6 +11,10 @@
             }
         },
         "components": {
+            "minecraft:collision_box": {
+                "origin": [-2.5, 0, -2.5],
+                "size": [5, 12, 5]
+            },
             "minecraft:custom_components": [
                 "content:light_component"
             ],
@@ -25,7 +29,10 @@
                 "destroy_chance_modifier": 10
             },
             "minecraft:geometry": "geometry.table_lamp",
-            "minecraft:map_color": "#5f4a2b"
+            "minecraft:selection_box": {
+                "origin": [-2.5, 0, -2.5],
+                "size": [5, 12, 5]
+            }
         },
         "permutations": [
             {

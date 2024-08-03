@@ -16,7 +16,10 @@
             }
         },
         "components": {
-            "minecraft:collision_box":false,
+            "minecraft:collision_box": {
+                "origin": [-8, 0, 7],
+                "size": [16, 16, 1]
+            },
             "minecraft:custom_components": [
                 "content:television_component"
             ],
@@ -32,7 +35,10 @@
             },
             "minecraft:geometry": "geometry.television",
             "minecraft:light_emission": 5,
-            "minecraft:map_color": "#5f4a2b"
+            "minecraft:selection_box": {
+                "origin": [-8, 0, 6],
+                "size": [16, 16, 2]
+            }
         },
         "permutations": [
             {
