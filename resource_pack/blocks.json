@@ -1,5 +1,11 @@
 {
     "format_version": "1.21.0",
+    "tma:blue_carpet": {
+        "textures": "blue_carpet"
+    },
+    "tma:brown_carpet": {
+        "textures": "brown_carpet"
+    },
     "tma:deepslate_uranium_ore": {
         "textures": "deepslate_uranium_ore",
         "sound": "stone"
@@ -15,6 +21,12 @@
     },
     "tma:oak_table": {
         "sound": "wood"
+    },
+    "tma:light_blue_carpet": {
+        "textures": "light_blue_carpet"
+    },
+    "tma:light_green_carpet": {
+        "textures": "light_green_carpet"
     },
     "tma:pipe": {
         "textures": "pipe",
@@ -46,6 +58,9 @@
     "tma:well_covered": {
 		"sound": "stone"
 	},
+    "tma:white_carpet": {
+        "textures": "white_carpet"
+    },
     "tma:spruce_white_chair": {
         "sound": "wood"
     },

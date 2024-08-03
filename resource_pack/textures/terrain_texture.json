@@ -4,6 +4,12 @@
     "padding": 8,
     "num_mip_levels": 4,
     "texture_data": {
+        "blue_carpet": {
+            "textures": "textures/blocks/carpet/blue_carpet"
+        },
+        "brown_carpet": {
+            "textures": "textures/blocks/carpet/brown_carpet"
+        },
         "deepslate_uranium_ore": {
             "textures": "textures/blocks/deepslate_uranium_ore"
         },
@@ -12,6 +18,12 @@
         },
         "gray_couch": {
             "textures": "textures/blocks/gray_couch"
+        },
+        "light_blue_carpet": {
+            "textures": "textures/blocks/carpet/light_blue_carpet"
+        },
+        "light_green_carpet": {
+            "textures": "textures/blocks/carpet/light_green_carpet"
         },
         "oak_cabinet": {
             "textures": "textures/blocks/oak_cabinet"
@@ -100,6 +112,9 @@
         "well_top": {
 			"textures": "textures/blocks/well_top.png"
 		},
+        "white_carpet": {
+            "textures": "textures/blocks/carpet/white_carpet"
+        },
         "white_light": {
             "textures": "textures/blocks/white_light"
         },
