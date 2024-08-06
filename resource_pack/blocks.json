@@ -1,5 +1,8 @@
 {
     "format_version": "1.21.0",
+    "tma:big_door": {
+		"sound": "wood"
+	},
     "tma:blue_carpet": {
         "textures": "blue_carpet"
     },

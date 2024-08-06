@@ -10,6 +10,7 @@ item.tma:snow_blower=Snow Blower
 item.tma:ulysses=Ulysses
 item.tma:uranium_ingot=Uranium Ingot
 
+tile.tma:big_door.name=Big Door
 tile.tma:block_entity.name=Block Entity
 tile.tma:blue_carpet.name=Blue Carpet
 tile.tma:brown_carpet.name=Brown Carpet

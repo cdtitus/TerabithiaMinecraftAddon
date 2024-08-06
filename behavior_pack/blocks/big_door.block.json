@@ -1,0 +1,116 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "tma:big_door",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.door"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": ["minecraft:cardinal_direction"]
+				}
+			},
+			"states": {
+                "tma:door_state": ["closed", "open"]
+            }
+		},
+		"components": {
+			"minecraft:display_name": "Big Door",
+			"minecraft:custom_components": ["tma:big_door"],
+			"minecraft:collision_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 4]
+			},
+			"minecraft:selection_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 4]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.4
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 20,
+				"catch_chance_modifier": 5
+			},
+			"minecraft:geometry": "geometry.big_door",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "big_door",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#5f4a2b"
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_state') == 'closed'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_state') == 'closed'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_state') == 'closed'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_state') == 'closed'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_state') == 'open'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_state') == 'open'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_state') == 'open'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_state') == 'open'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
+				}
+			}
+		]
+	}
+}

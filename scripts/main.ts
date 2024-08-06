@@ -1,5 +1,6 @@
 import { world, system, WorldInitializeBeforeEvent } from '@minecraft/server';
 
+import { BigDoorComponent } from './big_door.component';
 import { BlockEntityComponent } from './block_entity.component';
 import { CouchComponent } from './couch.component';
 import { LightComponent } from './light.component';
@@ -14,6 +15,8 @@ import { TableComponent } from './table.component';
 
 
 world.beforeEvents.worldInitialize.subscribe((initEvent: WorldInitializeBeforeEvent) => {
+    initEvent.blockComponentRegistry
+        .registerCustomComponent('tma:big_door', new BigDoorComponent());
     initEvent.blockComponentRegistry
         .registerCustomComponent('tma:block_entity', new BlockEntityComponent());
     initEvent.blockComponentRegistry

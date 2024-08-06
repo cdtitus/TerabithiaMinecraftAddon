@@ -4,6 +4,9 @@
     "padding": 8,
     "num_mip_levels": 4,
     "texture_data": {
+        "big_door": {
+			"textures": "textures/blocks/big_door.png"
+		},
         "blue_carpet": {
             "textures": "textures/blocks/carpet/blue_carpet"
         },
