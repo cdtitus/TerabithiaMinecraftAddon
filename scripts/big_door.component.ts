@@ -41,21 +41,25 @@ export class BigDoorComponent implements BlockCustomComponent {
         const rootBlock = this._getRoot(event.block, oldPermutation, event.dimension);
 
         let newState = '';
+        let sound = '';
         if (curState === 'closed') {
             newState = 'open';
-            event.player?.playSound('random.door_open');
+            sound = 'random.door_close';
         }
         if (curState === 'open') {
             newState = 'closed';
-            event.player?.playSound('random.door_close');
+            sound = 'random.door_open';
         }
 
         const states = {'minecraft:cardinal_direction': direction, 'tma:door_state': newState};
-        rootBlock.setPermutation(BlockPermutation.resolve(event.block.typeId, states));
-        const newPermutation = rootBlock.permutation;
+        const newPermutation = BlockPermutation.resolve(event.block.typeId, states);
 
-        this._removeAdjacent(rootBlock, oldPermutation, event.dimension);
-        this._setAdjacent(rootBlock, newPermutation, event.dimension);
+        if (this._areaClear(rootBlock, newPermutation, event.dimension)) {
+            rootBlock.setPermutation(newPermutation);
+            this._removeAdjacent(rootBlock, oldPermutation, event.dimension);
+            this._setAdjacent(rootBlock, newPermutation, event.dimension);
+            event.player?.playSound(sound);
+        }
     }
 
     private _getDirectionVector(permutation: BlockPermutation): Vector3 {
@@ -166,9 +170,23 @@ export class BigDoorComponent implements BlockCustomComponent {
             for (let w = 0; w < this.width; w++) {
                 const offset = <Vector3> new Vector3Builder(direction.x * w, h, direction.z * w);
                 const block = <Block>dimension.getBlock(Vector3Utils.add(location, offset));
-                if (!block.isAir) {
+                if (!block.isAir) 
                     return false;
-                }
+            }
+        }
+        return true;
+    }
+
+    private _areaClear(block: Block, permutation: BlockPermutation, dimension: Dimension): boolean {
+        const location = <Vector3>block.location;
+        const direction = this._getDirectionVector(permutation);
+
+        for (let h = 0; h < this.hight; h++) {
+            for (let w = 1; w < this.width; w++) {
+                const offset = <Vector3> new Vector3Builder(direction.x * w, h, direction.z * w);
+                const block = <Block>dimension.getBlock(Vector3Utils.add(location, offset));
+                if (!block.isAir) 
+                    return false;
             }
         }
         return true;
