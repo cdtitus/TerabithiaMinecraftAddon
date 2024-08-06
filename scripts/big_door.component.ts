@@ -44,11 +44,11 @@ export class BigDoorComponent implements BlockCustomComponent {
         let sound = '';
         if (curState === 'closed') {
             newState = 'open';
-            sound = 'random.door_close';
+            sound = 'random.door_open';
         }
         if (curState === 'open') {
             newState = 'closed';
-            sound = 'random.door_open';
+            sound = 'random.door_close';
         }
 
         const states = {'minecraft:cardinal_direction': direction, 'tma:door_state': newState};
