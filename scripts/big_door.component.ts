@@ -27,6 +27,7 @@ export class BigDoorComponent implements BlockCustomComponent {
             const direction = <string>permutation.getState('minecraft:cardinal_direction');
             const states = {'minecraft:cardinal_direction': direction, 'tma:door_open': false, 'tma:door_mirrored': true};
             permutation = BlockPermutation.resolve(event.permutationToPlace.type.id, states);
+            event.permutationToPlace = permutation
         }
 
         if (this._areaClear(event.block, permutation, event.dimension, 0))
@@ -230,12 +231,16 @@ export class BigDoorComponent implements BlockCustomComponent {
         const location = <Vector3>block.location;
         const direction = this._getDirectionVector(permutation);
 
-        const firstBlock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(direction.x * -1, 0, direction.z * -1)));
-        const secondBlock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(direction.x * -2, 0, direction.z * -2)));
+        const lastBlock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(-direction.x * this.width, 0, -direction.z * this.width)));
 
-        if (firstBlock.isAir && secondBlock.typeId == "tma:big_door" ) 
+        if (lastBlock.typeId == "tma:big_door") {
+            for (let w = 1; w < this.width; w++) {
+                const nblock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(-direction.x * w, 0, -direction.z * w)));
+                if (!nblock.isAir)
+                    return false;
+            }
             return true;
-
+        }
         return false;
     }
 
