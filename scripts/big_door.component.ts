@@ -8,8 +8,6 @@ import {
     Vector3,
     BlockComponentPlayerPlaceBeforeEvent,
     Block,
-    world,
-    BlockComponent,
 } from '@minecraft/server';
 
 export class BigDoorComponent implements BlockCustomComponent {
@@ -23,38 +21,46 @@ export class BigDoorComponent implements BlockCustomComponent {
     }
 
     beforeOnPlayerPlace(event: BlockComponentPlayerPlaceBeforeEvent): void {
-        if (this._adjacentIsAir(event.block, event.permutationToPlace, event.dimension))
-            this._setAdjacent(event.block, event.permutationToPlace, event.dimension);
+        let permutation = event.permutationToPlace;
+
+        if (this._hasNeighbor(event.block, permutation, event.dimension)) {
+            const direction = <string>permutation.getState('minecraft:cardinal_direction');
+            const states = {'minecraft:cardinal_direction': direction, 'tma:door_open': false, 'tma:door_mirrored': true};
+            permutation = BlockPermutation.resolve(event.permutationToPlace.type.id, states);
+        }
+
+        if (this._areaClear(event.block, permutation, event.dimension, 0))
+            this._setAdjacent(event.block, permutation, event.dimension);
         else 
             event.cancel = true;
     }
 
     onPlayerDestroy(event: BlockComponentPlayerDestroyEvent): void {
-        const rootBlock = this._getRoot(event.block, event.destroyedBlockPermutation, event.dimension);
+        const rootBlock = this._getRootBlock(event.block, event.destroyedBlockPermutation, event.dimension);
         this._removeAdjacent(<Block>rootBlock, event.destroyedBlockPermutation, event.dimension);
     }
 
     onPlayerInteract(event: BlockComponentPlayerInteractEvent): void {
         const oldPermutation = event.block.permutation;
         const direction = <string>oldPermutation.getState('minecraft:cardinal_direction');
-        const curState = <string>oldPermutation.getState('tma:door_state');
-        const rootBlock = this._getRoot(event.block, oldPermutation, event.dimension);
+        let open = <boolean>oldPermutation.getState('tma:door_open');
+        const mirrored = <boolean>oldPermutation.getState('tma:door_mirrored');
+        const rootBlock = this._getRootBlock(event.block, oldPermutation, event.dimension);
 
-        let newState = '';
+        open = !open;
+
         let sound = '';
-        if (curState === 'closed') {
-            newState = 'open';
+        if (open) {
             sound = 'random.door_open';
         }
-        if (curState === 'open') {
-            newState = 'closed';
+        else {
             sound = 'random.door_close';
         }
 
-        const states = {'minecraft:cardinal_direction': direction, 'tma:door_state': newState};
+        const states = {'minecraft:cardinal_direction': direction, 'tma:door_open': open, 'tma:door_mirrored': mirrored};
         const newPermutation = BlockPermutation.resolve(event.block.typeId, states);
 
-        if (this._areaClear(rootBlock, newPermutation, event.dimension)) {
+        if (this._areaClear(rootBlock, newPermutation, event.dimension, 1)) {
             rootBlock.setPermutation(newPermutation);
             this._removeAdjacent(rootBlock, oldPermutation, event.dimension);
             this._setAdjacent(rootBlock, newPermutation, event.dimension);
@@ -64,25 +70,10 @@ export class BigDoorComponent implements BlockCustomComponent {
 
     private _getDirectionVector(permutation: BlockPermutation): Vector3 {
         const direction = <string>permutation.getState('minecraft:cardinal_direction');
-        const state = <string>permutation.getState('tma:door_state');
+        const open = <boolean>permutation.getState('tma:door_open');
+        const mirrored = <boolean>permutation.getState('tma:door_mirrored');
 
-        if (state == 'closed') {
-            switch (direction) {
-                case 'north':
-                    return <Vector3> new Vector3Builder(1, 0, 0);
-                    break;
-                case 'east':
-                    return <Vector3> new Vector3Builder(0, 0, 1);
-                    break;
-                case 'south':
-                    return <Vector3> new Vector3Builder(-1, 0, 0);
-                    break;
-                case 'west':
-                    return <Vector3> new Vector3Builder(0, 0, -1);
-                    break;
-            }
-        }
-        else if (state == 'open') {
+        if (open) {
             switch (direction) {
                 case 'north':
                     return <Vector3> new Vector3Builder(0, 0, -1);
@@ -98,62 +89,120 @@ export class BigDoorComponent implements BlockCustomComponent {
                     break;
             }
         }
-        
+        else {
+            if (mirrored) {
+                switch (direction) {
+                    case 'north':
+                        return <Vector3> new Vector3Builder(-1, 0, 0);
+                        break;
+                    case 'east':
+                        return <Vector3> new Vector3Builder(0, 0, -1);
+                        break;
+                    case 'south':
+                        return <Vector3> new Vector3Builder(1, 0, 0);
+                        break;
+                    case 'west':
+                        return <Vector3> new Vector3Builder(0, 0, 1);
+                        break;
+                }
+            }
+            else {
+                switch (direction) {
+                    case 'north':
+                        return <Vector3> new Vector3Builder(1, 0, 0);
+                        break;
+                    case 'east':
+                        return <Vector3> new Vector3Builder(0, 0, 1);
+                        break;
+                    case 'south':
+                        return <Vector3> new Vector3Builder(-1, 0, 0);
+                        break;
+                    case 'west':
+                        return <Vector3> new Vector3Builder(0, 0, -1);
+                        break;
+                }
+            }
+        }
         return <Vector3> new Vector3Builder(0, 0, 0);
     }
 
-    private _getRoot(block: Block, permutation: BlockPermutation, dimension: Dimension): Block {
+    private _getRootBlock(block: Block, permutation: BlockPermutation, dimension: Dimension): Block {
         const direction = <string>permutation.getState('minecraft:cardinal_direction');
-        const state = <string>permutation.getState('tma:door_state');
+        const open = <boolean>permutation.getState('tma:door_open');
+        const mirrored = <boolean>permutation.getState('tma:door_mirrored');
 
         if (block.below()?.typeId == "tma:big_door") {
-            return this._getRoot(<Block>block.below(), permutation, dimension);
+            return this._getRootBlock(<Block>block.below(), permutation, dimension);
+        }
+        if (open) {
+            switch (direction) {
+                case 'north':
+                    if (block.south()?.typeId == "tma:big_door")
+                        return this._getRootBlock(<Block>block.south(), permutation, dimension);
+                    else
+                        break;
+                case 'east':
+                    if (block.west()?.typeId == "tma:big_door")
+                        return this._getRootBlock(<Block>block.west(), permutation, dimension);
+                    else
+                        break;
+                case 'south':
+                    if (block.north()?.typeId == "tma:big_door")
+                        return this._getRootBlock(<Block>block.north(), permutation, dimension);
+                    else
+                        break;
+                case 'west':
+                    if (block.east()?.typeId == "tma:big_door")
+                        return this._getRootBlock(<Block>block.east(), permutation, dimension);
+                    else
+                        break;
+            }
         }
         else {
-            if (state == 'closed') {
+            if (mirrored) {
                 switch (direction) {
                     case 'north':
-                        if (block.west()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.west(), permutation, dimension);
+                        if (block.east()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.east(), permutation, dimension);
                         else
                             break;
                     case 'east':
-                        if (block.north()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.north(), permutation, dimension);
+                        if (block.south()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.south(), permutation, dimension);
                         else
                             break;
                     case 'south':
-                        if (block.east()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.east(), permutation, dimension);
+                        if (block.west()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.west(), permutation, dimension);
                         else
                             break;
                     case 'west':
-                        if (block.south()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.south(), permutation, dimension);
+                        if (block.north()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.north(), permutation, dimension);
                         else
                             break;
                 }
             }
-            else if (state == 'open') {
+            else {
                 switch (direction) {
                     case 'north':
-                        if (block.south()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.south(), permutation, dimension);
+                        if (block.west()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.west(), permutation, dimension);
                         else
                             break;
                     case 'east':
-                        if (block.west()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.west(), permutation, dimension);
+                        if (block.north()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.north(), permutation, dimension);
                         else
                             break;
                     case 'south':
-                        if (block.north()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.north(), permutation, dimension);
+                        if (block.east()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.east(), permutation, dimension);
                         else
                             break;
                     case 'west':
-                        if (block.east()?.typeId == "tma:big_door")
-                            return this._getRoot(<Block>block.east(), permutation, dimension);
+                        if (block.south()?.typeId == "tma:big_door")
+                            return this._getRootBlock(<Block>block.south(), permutation, dimension);
                         else
                             break;
                 }
@@ -162,12 +211,12 @@ export class BigDoorComponent implements BlockCustomComponent {
         return block;
     }
 
-    private _adjacentIsAir(block: Block, permutation: BlockPermutation, dimension: Dimension): boolean {
+    private _areaClear(block: Block, permutation: BlockPermutation, dimension: Dimension, widthShunt: number): boolean {
         const location = <Vector3>block.location;
         const direction = this._getDirectionVector(permutation);
 
         for (let h = 0; h < this.hight; h++) {
-            for (let w = 0; w < this.width; w++) {
+            for (let w = widthShunt; w < this.width; w++) {
                 const offset = <Vector3> new Vector3Builder(direction.x * w, h, direction.z * w);
                 const block = <Block>dimension.getBlock(Vector3Utils.add(location, offset));
                 if (!block.isAir) 
@@ -177,19 +226,17 @@ export class BigDoorComponent implements BlockCustomComponent {
         return true;
     }
 
-    private _areaClear(block: Block, permutation: BlockPermutation, dimension: Dimension): boolean {
+    private _hasNeighbor(block: Block, permutation: BlockPermutation, dimension: Dimension): boolean {
         const location = <Vector3>block.location;
         const direction = this._getDirectionVector(permutation);
 
-        for (let h = 0; h < this.hight; h++) {
-            for (let w = 1; w < this.width; w++) {
-                const offset = <Vector3> new Vector3Builder(direction.x * w, h, direction.z * w);
-                const block = <Block>dimension.getBlock(Vector3Utils.add(location, offset));
-                if (!block.isAir) 
-                    return false;
-            }
-        }
-        return true;
+        const firstBlock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(direction.x * -1, 0, direction.z * -1)));
+        const secondBlock = <Block>dimension.getBlock(Vector3Utils.add(location, new Vector3Builder(direction.x * -2, 0, direction.z * -2)));
+
+        if (firstBlock.isAir && secondBlock.typeId == "tma:big_door" ) 
+            return true;
+
+        return false;
     }
 
     private _setAdjacent(block: Block, permutation: BlockPermutation, dimension: Dimension): void {

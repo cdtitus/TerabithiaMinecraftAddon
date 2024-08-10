@@ -13,7 +13,8 @@
 				}
 			},
 			"states": {
-                "tma:door_state": ["closed", "open"]
+                "tma:door_open": [false, true],
+				"tma:door_mirrored": [false, true]
             }
 		},
 		"components": {
@@ -48,7 +49,7 @@
 		},
 		"permutations": [
 			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_state') == 'closed'",
+				"condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_open') == false) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == false) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == true)",
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [0, 180, 0]
@@ -56,7 +57,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_state') == 'closed'",
+				"condition": "(q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_open') == false) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == false) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == true)",
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [0, 0, 0]
@@ -64,7 +65,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_state') == 'closed'",
+				"condition": "(q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_open') == false) || (q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == false) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == true)",
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [0, 90, 0]
@@ -72,42 +73,10 @@
 				}
 			},
 			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_state') == 'closed'",
+				"condition": "(q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_open') == false) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == false) || (q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_open') == true && q.block_state('tma:door_mirrored') == true)",
 				"components": {
 					"minecraft:transformation": {
 						"rotation": [0, 270, 0]
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tma:door_state') == 'open'",
-				"components": {
-					"minecraft:transformation": {
-						"rotation": [0, 90, 0]
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tma:door_state') == 'open'",
-				"components": {
-					"minecraft:transformation": {
-						"rotation": [0, 270, 0]
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tma:door_state') == 'open'",
-				"components": {
-					"minecraft:transformation": {
-						"rotation": [0, 0, 0]
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tma:door_state') == 'open'",
-				"components": {
-					"minecraft:transformation": {
-						"rotation": [0, 180, 0]
 					}
 				}
 			}
